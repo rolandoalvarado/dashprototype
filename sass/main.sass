@@ -12,7 +12,7 @@ body
 	font: 0.75em/1.5 "Lucida Grande","Helvetica Neue", sans-serif
 	color: lighten($main-color, 30%)
 
-input 
+input, select 
 	border-radius: 0 !important
 
 a
@@ -60,21 +60,35 @@ nav#main
 		margin-bottom: 25px
 		color: $main-color
 		
-	header h2
-		font-weight: normal
-		font-size: 1em
-		margin-top: 0
-		margin-bottom: 0
-		line-height: 1.5
+		#search-bar input
+			padding: 0
+			margin: 0
+			border: 0
+			box-shadow: none
+			width: 100px
+			font-size: 1em
+		
+		h2
+			font-weight: normal
+			font-size: 1.5em
+			margin-top: -5px
+			margin-bottom: 0
+			line-height: 1.5
 	
 	.status
-		color: lighten($main-color, 30%)
+		color: lighten($main-color, 35%)
 		
 		span
 			margin-right: 10px
 
 #unified-notice
 	text-align: right
+	
+	a
+		background-color: lighten($blue, 20%)
+		color: $white
+		padding: 6px 10px
+		margin-top: -6px
 		
 #main-list	
 	.dropdown
@@ -93,9 +107,9 @@ nav#main
 			
 	.list-item
 		background-color: darken($white, 5%)
-		padding: 12px
+		padding: 6px 5px
 		border-radius: 3px
-		height: 116px
+		height: 128px
 		position: relative
 		
 		h3
@@ -104,7 +118,11 @@ nav#main
 			padding: 0
 		
 		&:hover
+			cursor: move
 			background-color: darken($white, 8%)
+			border: 3px solid $blue
+			height: 122px
+			box-shadow: inset 0 0 5px rgba(0,0,0,0.2)
 		
 	.add
 		border: 2px dashed darken($white, 5%)
@@ -112,14 +130,18 @@ nav#main
 		text-align: center
 		font-size: 1.2em
 		
+		&:hover
+			background-color: darken($white, 2%)
+			border: 2px dashed darken($white, 5%)
+			height: 128px
+			box-shadow: none
+			cursor: pointer
+			 
+		
 		span
 			position: relative
 			top: 25%
-	
-	.click 
-		border: 3px solid $blue
-		height: 110px
-		box-shadow: inset 0 0 5px rgba(0,0,0,0.2)
+		
 	
 	.status
 		position: absolute
@@ -139,10 +161,37 @@ nav#main
 	.yellow
 		background-color: $yellow
 	
+	.view i
+		color: $blue
+		position: absolute
+		font-size: 60px
+		padding: 0
+		text-align: center
+		top: 50%
+		margin-top: -15px
+		left: 50%
+		margin-left: -25px
+		border-radius: 100px
+		
+		&:hover
+			color: lighten($blue, 20%)
+	
 	.attachment
 		list-style: none
-		margin-left: 0
+		margin-left: -50px
 		margin-bottom: 0
+		
+		li a
+			background-color: $blue
+			color: $white
+			display: block
+			width: 45px
+			padding: 0 3px
+			margin: 3px
+			border-radius: 3px
+			
+			&:hover
+				background-color: lighten($blue,10%)
 
 
 #vm-tab
@@ -157,8 +206,9 @@ nav#main
 		a
 			color: $main-color
 
-#proj-create
-	position: absolute
+#proj-create,
+#volume-list
+	position: fixed
 	left: 50%
 	top: 50%
 	margin-left: -440px
@@ -177,7 +227,7 @@ nav#main
 		font-weight: normal
 		color: $main-color
 	
-	input
+	input[id=proj-name]
 		width: 98%
 #info 
 	dl

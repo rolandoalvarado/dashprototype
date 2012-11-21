@@ -17,25 +17,130 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        
+        <style type="text/css" media="screen">
+        	#proj-create {
+        		top: 270px
+        	}
+        	
+        	select[multiple=multiple] {
+	        	height: 300px
+        	}
+        </style>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         
+        <div id="volume-list" class="container hide">
+        	<h3>Volumes</h3>
+	        <table class="table">
+		        <thead>
+		        	<th>Name</th>
+		        	<th>Description</th>
+		        	<th>Actions</th>
+		        </thead>
+		        <tbody>
+		        	<tr>
+				        <td>Volume 1</td>
+				        <td>This is a new volume</td>
+				        <td>Actions <i class="icon-caret-down"></i></td>
+			        </tr>
+			        
+			        <tr>
+				        <td>Volume 2</td>
+				        <td>This is a new volume</td>
+				        <td>Actions <i class="icon-caret-down"></i></td>
+			        </tr>
+			        
+			        <tr>
+				        <td>Volume 3</td>
+				        <td>This is a new volume</td>
+				        <td>Actions <i class="icon-caret-down"></i></td>
+			        </tr>
+		        </tbody>
+	        </table>
+        </div>
+        
         <div id="proj-create" class="container hide">
-	       <div class="row-fluid">
-		       <div class="span12">
-			       <header>
-				       <input type="text" placeholder="Instance Name" id="proj-name" />
-			       </header>
-			       
-	                <div class="right">
-	                	<button class="btn btn-small" type="button" id="cancel">Cancel</button>
-					    <button class="btn btn-primary btn-small" type="button" id="create">Create Instance</button>
-					</div>
-		       </div>
-	       </div>
+	        <div class="row-fluid">
+	            <div class="span12">
+	                <header><input type="text" placeholder="Instance Name" id="proj-name"></header>
+	
+	                <form class="form clearfix">
+	                    <div class="control-group left">
+	                        <div class="controls">
+	                            <select multiple="multiple">
+								  <option>Choose Image</option>
+								  <option>Image 1</option>
+								  <option>Image 2</option>
+								  <option>Image 3</option>
+								  <option>Image 4</option>
+								</select>
+	                        </div>
+	                    </div>
+	                    <div class="right">
+	                    <div class="control-group">
+	                        <label class="control-label">Flavor</label>
+	
+	                        <div class="controls">
+	                            <input type="range" id="inputPassword" placeholder="Password">
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="control-group">
+	                        <label class="control-label">Count</label>
+	
+	                        <div class="controls">
+	                            <input type="range" id="inputPassword" placeholder="Password">
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="control-group">
+	                        <label class="checkbox">
+							  <input type="checkbox" value="">
+							  Security Group 1
+							</label>
+							
+							<label class="checkbox">
+							  <input type="checkbox" value="">
+							  Security Group 2
+							</label>
+							
+							<label class="checkbox">
+							  <input type="checkbox" value="">
+							  Security Group 3
+							</label>
+	                    </div>
+	                    
+	                    <div class="control-group">
+	                        <label class="control-label">Keypair</label>
+	
+	                        <div class="controls">
+	                            <select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="control-group">
+	
+	                        <div class="controls">
+	                            <input type="text" placeholder="Password" />
+	                        </div>
+	                    </div>
+</div>	                </form>
+	
+	                <div class="right clearfix">
+	                    <button class="btn btn-small" type="button" id="cancel">Cancel</button> <button class="btn btn-primary btn-small" type="button" id="create">Create Instance</button>
+	                </div>
+	            </div>
+	        </div>
 	    </div>
 	    
         <div id="header-wrap">
@@ -57,7 +162,7 @@
 	    <div class="notice-wrap clearfix hide">
 	    	<div id="notice" class="container">
 	    		<div class="row">
-		    		<p class="span12">Project has been launched</p>
+		    		<p class="span12">Instance has been Created</p>
 		    	</div>
 	    	</div>
 	    </div>
@@ -73,12 +178,12 @@
 	                
 	
 	                <div class="right span4" id="unified-notice">
-	                    <a href=""><strong>VM Name</strong> has stopped running!</a>
+	                    <a href=""><i class="icon-warning-sign"></i> <strong>VM Name</strong> has stopped running!</a>
 	                </div>
 	                
 	                
-	                <div class="right span2">
-		                <i class="icon-search"></i>
+	                <div class="right span2" id="search-bar">
+		                <i class="icon-search"></i> <input type="text" placeholder="Search&hellip;" />
 	                </div>
 	            </header>
 	
@@ -93,7 +198,9 @@
 	                    <div class="list-item">
 	                        <p class="status red">warning</p>
 	                        
-	                        <div class="hide more-info">                
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
 		                        <div class="dropdown">
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
@@ -115,9 +222,10 @@
 		                        </div>
 		                        
 		                        <ul class="attachment">
-			                        <li><i class="icon-hdd"></i> 1</li>
-			                        <li><i class="icon-lock"></i> 23</li>
-			                        <li><i class="icon-globe"></i> 300</li>
+			                        <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 	                        </div>
 	                    </div>
@@ -131,7 +239,9 @@
 	                    <div class="list-item">
 	                        <p class="status yellow">warning</p>
 	
-	                        <div class="hide more-info">                
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
 		                        <div class="dropdown">
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
@@ -153,9 +263,10 @@
 		                        </div>
 		                        
 		                        <ul class="attachment">
-			                        <li><i class="icon-hdd"></i> 1</li>
-			                        <li><i class="icon-lock"></i> 23</li>
-			                        <li><i class="icon-globe"></i> 300</li>
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 		                        
 		                        
@@ -171,7 +282,9 @@
 	                    <div class="list-item">
 	                        <p class="status green">online</p>
 	
-	                        <div class="hide more-info">                
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
 		                        <div class="dropdown">
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
@@ -193,9 +306,10 @@
 		                        </div>
 		                        
 		                        <ul class="attachment">
-			                        <li><i class="icon-hdd"></i> 1</li>
-			                        <li><i class="icon-lock"></i> 23</li>
-			                        <li><i class="icon-globe"></i> 300</li>
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 		                        
 		                        
@@ -211,7 +325,9 @@
 	                    <div class="list-item">
 	                        <p class="status green">online</p>
 	
-	                        <div class="hide more-info">                
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
 		                        <div class="dropdown">
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
@@ -233,9 +349,10 @@
 		                        </div>
 		                        
 		                        <ul class="attachment">
-			                        <li><i class="icon-hdd"></i> 1</li>
-			                        <li><i class="icon-lock"></i> 23</li>
-			                        <li><i class="icon-globe"></i> 300</li>
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 		                        
 		                        
@@ -251,7 +368,9 @@
 	                    <div class="list-item">
 	                        <p class="status green">online</p>
 	
-	                        <div class="hide more-info">                
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
 		                        <div class="dropdown">
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
@@ -273,9 +392,10 @@
 		                        </div>
 		                        
 		                        <ul class="attachment">
-			                        <li><i class="icon-hdd"></i> 1</li>
-			                        <li><i class="icon-lock"></i> 23</li>
-			                        <li><i class="icon-globe"></i> 300</li>
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 		                        
 		                        
@@ -291,7 +411,9 @@
 	                    <div class="list-item">
 	                        <p class="status green">online</p>
 	
-	                        <div class="hide more-info">                
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
 		                        <div class="dropdown">
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
@@ -313,9 +435,10 @@
 		                        </div>
 		                        
 		                        <ul class="attachment">
-			                        <li><i class="icon-hdd"></i> 1</li>
-			                        <li><i class="icon-lock"></i> 23</li>
-			                        <li><i class="icon-globe"></i> 300</li>
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 		                        
 		                        
@@ -331,7 +454,9 @@
 	                    <div class="list-item">
 	                        <p class="status green">online</p>
 	
-	                        <div class="hide more-info">                
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
 		                        <div class="dropdown">
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
@@ -353,9 +478,10 @@
 		                        </div>
 		                        
 		                        <ul class="attachment">
-			                        <li><i class="icon-hdd"></i> 1</li>
-			                        <li><i class="icon-lock"></i> 23</li>
-			                        <li><i class="icon-globe"></i> 300</li>
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 		                        
 		                        
@@ -371,7 +497,9 @@
 	                    <div class="list-item">
 	                        <p class="status green">online</p>
 	
-	                        <div class="hide more-info">                
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
 		                        <div class="dropdown">
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
@@ -393,9 +521,10 @@
 		                        </div>
 		                        
 		                        <ul class="attachment">
-			                        <li><i class="icon-hdd"></i> 1</li>
-			                        <li><i class="icon-lock"></i> 23</li>
-			                        <li><i class="icon-globe"></i> 300</li>
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 		                        
 		                        
@@ -411,7 +540,9 @@
 	                    <div class="list-item">
 	                        <p class="status green">online</p>
 	
-	                        <div class="hide more-info">                
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
 		                        <div class="dropdown">
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
@@ -433,9 +564,10 @@
 		                        </div>
 		                        
 		                        <ul class="attachment">
-			                        <li><i class="icon-hdd"></i> 1</li>
-			                        <li><i class="icon-lock"></i> 23</li>
-			                        <li><i class="icon-globe"></i> 300</li>
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 		                        
 		                        
@@ -451,7 +583,9 @@
 	                    <div class="list-item">
 	                        <p class="status green">online</p>
 	
-	                        <div class="hide more-info">                
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
 		                        <div class="dropdown">
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
@@ -473,9 +607,10 @@
 		                        </div>
 		                        
 		                        <ul class="attachment">
-			                        <li><i class="icon-hdd"></i> 1</li>
-			                        <li><i class="icon-lock"></i> 23</li>
-			                        <li><i class="icon-globe"></i> 300</li>
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 		                        
 		                        
@@ -491,7 +626,9 @@
 	                    <div class="list-item">
 	                        <p class="status green">online</p>
 	
-	                        <div class="hide more-info">                
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
 		                        <div class="dropdown">
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
@@ -513,9 +650,10 @@
 		                        </div>
 		                        
 		                        <ul class="attachment">
-			                        <li><i class="icon-hdd"></i> 1</li>
-			                        <li><i class="icon-lock"></i> 23</li>
-			                        <li><i class="icon-globe"></i> 300</li>
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 		                        
 		                        
@@ -531,7 +669,9 @@
 	                    <div class="list-item">
 	                        <p class="status green">online</p>
 	
-	                        <div class="hide more-info">                
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
 		                        <div class="dropdown">
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
@@ -553,9 +693,10 @@
 		                        </div>
 		                        
 		                        <ul class="attachment">
-			                        <li><i class="icon-hdd"></i> 1</li>
-			                        <li><i class="icon-lock"></i> 23</li>
-			                        <li><i class="icon-globe"></i> 300</li>
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 		                        
 		                        
@@ -571,7 +712,9 @@
 	                    <div class="list-item">
 	                        <p class="status green">online</p>
 	
-	                        <div class="hide more-info">                
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
 		                        <div class="dropdown">
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
@@ -593,9 +736,10 @@
 		                        </div>
 		                        
 		                        <ul class="attachment">
-			                        <li><i class="icon-hdd"></i> 1</li>
-			                        <li><i class="icon-lock"></i> 23</li>
-			                        <li><i class="icon-globe"></i> 300</li>
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 		                        
 		                        
@@ -615,7 +759,7 @@
 		    	<div class="row">
 		    		<div class="command span1">
 					    <i class="icon-hdd"></i>
-					    <p>Volume</p>
+					    <p><a href="" class="show-vol">Volume</a></p>
 				    </div>
 				    
 				    <div class="command span1">
@@ -626,6 +770,16 @@
 				    <div class="command span1">
 					    <i class="icon-globe"></i>
 					    <p>Floating IP</p>
+				    </div>
+				    
+				    <div class="command span1">
+					    <i class="icon-camera"></i>
+					    <p>Snapshot</p>
+				    </div>
+				    
+				    <div class="command span1">
+					    <i class="icon-user"></i>
+					    <p>Collaborators</p>
 				    </div>
 				    
 				    

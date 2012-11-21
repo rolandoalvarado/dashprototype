@@ -18,5 +18,10 @@ $(document).ready(function(){
 		$('#proj-create').fadeOut('fast');
     	$('.notice-wrap').slideDown('fast').delay(3000).slideUp('fast');
 	});
+	
+	$('.show-vol').click(function(){
+		$('#volume-list').toggle();
+		return false
+	})
 });
 
