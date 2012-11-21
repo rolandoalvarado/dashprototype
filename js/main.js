@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.list-item').click(function(){
+	$('.list-item').hover(function(){
     	$(this).toggleClass('click');
     	$(this).find('.more-info').toggleClass('hide');
 	});	
