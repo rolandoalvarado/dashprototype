@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Instance</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        
+        <style type="text/css" media="screen">
+        	.node circle {
+			  cursor: pointer;
+			  fill: #fff;
+			  stroke: steelblue;
+			  stroke-width: 1.5px;
+			}
+			
+			.node text {
+			  font-size: 11px;
+			}
+			
+			path.link {
+			  fill: none;
+			  stroke: #ccc;
+			  stroke-width: 1.5px;
+			}
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+	    
+        <div id="header-wrap">
+	        <header class="clearfix container" id="main">
+	            <nav id="main" class="left"><strong><a href="index.html">Projects</a></strong> <a href="">Images</a> <a href="">Users</a> <a href="">Billing</a> <a href="">Resources</a> <a href="">Support</a></nav>
+	
+	            <div class="dropdown">
+	                Good Morning, Hunter Nield <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-caret-down"></i></a>
+	
+	                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+	                    <li><a href="">Settings</a></li>
+	
+	                    <li><a href="">Log Out</a></li>
+	                </ul>
+	            </div>
+	        </header>
+	    </div>
+	    
+	    <div class="notice-wrap clearfix hide">
+	    	<div id="notice" class="container">
+	    		<div class="row">
+		    		<p class="span12">Project has been launched</p>
+		    	</div>
+	    	</div>
+	    </div>
+	
+	    <div class="container" id="main-content">
+	        <div class="row">
+	            <header class="clearfix">
+	                <h2 class="span2"><a href="index.html">Project Name</a></h2>
+	
+	                <h2 class="span2"><a href="instance.html">Instance Name</a> (Active)</h2>
+	
+	                <div class="right">
+	                    <a href=""><strong>VM Name</strong> has stopped running!</a>
+	                </div>
+	            </header>
+	
+	            <ul class="span2" id="vm-tab">
+	                <li class="active"><a href="#info" data-toggle="tab">Info</a></li>
+	
+	                <li><a href="#diagram" data-toggle="tab">Diagram</a></li>
+	            </ul>
+	
+	            <div class="span10 tab-content">
+	                <div class="tab-pane active" id="info">
+	                    <div class="row">
+	                        <div class="span4">
+	                            <dl>
+	                                <dt>ID</dt>
+	
+	                                <dd>6b86ec6a-2b5c-4d7c-b572-219da8661693</dd>
+	                            </dl>
+	
+	                            <dl>
+	                                <dt>RAM</dt>
+	
+	                                <dd>2048</dd>
+	                            </dl>
+	
+	                            <dl>
+	                                <dt>vCPUs</dt>
+	
+	                                <dd>1</dd>
+	                            </dl>
+	
+	                            <dl>
+	                                <dt>Disk</dt>
+	
+	                                <dd>10</dd>
+	                            </dl>
+	
+	                            <dl>
+	                                <dt>Security Groups</dt>
+	
+	                                <dd>default</dd>
+	                            </dl>
+	
+	                            <dl>
+	                                <dt>Private IP</dt>
+	
+	                                <dd>10.2.0.14</dd>
+	                            </dl>
+	
+	                            <dl>
+	                                <dt>Public (internal)</dt>
+	
+	                                <dd>-</dd>
+	                            </dl>
+	
+	                            <dl>
+	                                <dt>Public (external)</dt>
+	
+	                                <dd>-</dd>
+	                            </dl>
+	
+	                            <dl>
+	                                <dt>Keypair Name</dt>
+	
+	                                <dd>-</dd>
+	                            </dl>
+	
+	                            <dl>
+	                                <dt>Image Name</dt>
+	
+	                                <dd>dwc-1099</dd>
+	                            </dl>
+	
+	                            <dl>
+	                                <dt>Volumes</dt>
+	
+	                                <dd>no volumes attached</dd>
+	                            </dl>
+	                        </div>
+	
+	                        <div class="span6">
+	                        	<h3>CPU Time</h3>
+							    <p><img src="img/graph.png" alt="graph" width="460" height="243"></p>
+							    
+							    <h3>Network</h3>
+							    <p><img src="img/graph.png" alt="graph" width="460" height="243"></p>
+							    
+							    <h3>Block I/O</h3>
+							    <p><img src="img/graph.png" alt="graph" width="460" height="243"></p>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	                <div class="tab-pane" id="diagram">
+	                    <img src="img/diagram.png" alt="diagram" width="780" height="700">
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    
+	    
+	    
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+</body>
+</html>

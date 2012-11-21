@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Projects</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <div id="proj-create" class="container hide">
+	       <div class="row-fluid">
+		       <div class="span12">
+			       <header>
+				       <input type="text" placeholder="Project Name" id="proj-name" />
+			       </header>
+			       
+			       <p>Click to add a description</p>
+			       
+			       <table class="table">
+	                    <thead>
+	                        <tr>
+	                            <th>Quota</th>
+	
+	                            <th>Limit</th>
+	                        </tr>
+	                    </thead>
+	
+	                    <tbody>
+	                        <tr>
+	                            <td>vCPU</td>
+	
+	                            <td>20</td>
+	                        </tr>
+	                        
+	                        <tr>
+	                            <td>Instance</td>
+	
+	                            <td>20</td>
+	                        </tr>
+	                        
+	                        <tr>
+	                            <td>Volume</td>
+	
+	                            <td>20</td>
+	                        </tr>
+	                        
+	                        <tr>
+	                            <td>Floating IP</td>
+	
+	                            <td>20</td>
+	                        </tr>
+	                        
+	                        <tr>
+	                            <td>Security Group</td>
+	
+	                            <td>20</td>
+	                        </tr>
+	                    </tbody>
+	                </table>
+	                
+	                <p class="right">
+	                	<button class="btn btn-small" type="button" id="cancel">Cancel</button>
+					    <button class="btn btn-primary btn-small" type="button" id="create">Create project</button>
+					</p>
+		       </div>
+	       </div>
+	    </div>
+	    
+        <div id="header-wrap">
+	        <header class="clearfix container" id="main">
+	            <nav id="main" class="left"><strong><a href="">Projects</a></strong> <a href="">Images</a> <a href="">Users</a> <a href="">Billing</a> <a href="">Resources</a> <a href="">Support</a></nav>
+	
+	            <div class="dropdown">
+	                Good Morning, Hunter Nield <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-caret-down"></i></a>
+	
+	                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+	                    <li><a href="">Settings</a></li>
+	
+	                    <li><a href="">Log Out</a></li>
+	                </ul>
+	            </div>
+	        </header>
+	    </div>
+	    
+	    <div class="notice-wrap clearfix hide">
+	    	<div id="notice" class="container">
+	    		<div class="row">
+		    		<p class="span12">Project has been launched</p>
+		    	</div>
+	    	</div>
+	    </div>
+	
+	    <div class="container" id="main-content">
+	        <div class="row">
+	            <header class="clearfix">
+	                <h2 class="span2">Project</h2>
+	
+	                <div class="span3 status">
+	                    <span>5 Running</span> <span>1 Error</span> <span>1 Warning</span>
+	                </div>
+	
+	                <div class="right">
+	                    <a href=""><strong>VM Name</strong> has stopped running!</a>
+	                </div>
+	            </header>
+	
+	            <div id="main-list">
+	                <div class="span2">
+	                    <div class="list-item add">
+	                        <span>Create New Project</span>
+	                    </div>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status red">warning</p>
+	
+	                        <div class="hide more-info">                
+		                        <div class="dropdown">
+		                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <i class="icon-caret-down"></i></a>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Edit</a></li>
+		
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance.html">Project Name</a></dt>
+	
+	                        <dd>Description</dd>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status yellow">warning</p>
+	
+	                        <div class="hide more-info">                
+		                        <div class="dropdown">
+		                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <i class="icon-caret-down"></i></a>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Edit</a></li>
+		
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance.html">Project Name</a></dt>
+	
+	                        <dd>Description</dd>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status green">online</p>
+	
+	                        <div class="hide more-info">                
+		                        <div class="dropdown">
+		                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <i class="icon-caret-down"></i></a>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Edit</a></li>
+		
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance.html">Project Name</a></dt>
+	
+	                        <dd>Description</dd>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status green">online</p>
+	
+	                        <div class="hide more-info">                
+		                        <div class="dropdown">
+		                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <i class="icon-caret-down"></i></a>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Edit</a></li>
+		
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance.html">Project Name</a></dt>
+	
+	                        <dd>Description</dd>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status green">online</p>
+	
+	                        <div class="hide more-info">                
+		                        <div class="dropdown">
+		                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <i class="icon-caret-down"></i></a>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Edit</a></li>
+		
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance.html">Project Name</a></dt>
+	
+	                        <dd>Description</dd>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status green">online</p>
+	
+	                        <div class="hide more-info">                
+		                        <div class="dropdown">
+		                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <i class="icon-caret-down"></i></a>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Edit</a></li>
+		
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance.html">Project Name</a></dt>
+	
+	                        <dd>Description</dd>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status green">online</p>
+	
+	                        <div class="hide more-info">                
+		                        <div class="dropdown">
+		                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <i class="icon-caret-down"></i></a>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Edit</a></li>
+		
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance.html">Project Name</a></dt>
+	
+	                        <dd>Description</dd>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status green">online</p>
+	
+	                        <div class="hide more-info">                
+		                        <div class="dropdown">
+		                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <i class="icon-caret-down"></i></a>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Edit</a></li>
+		
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance.html">Project Name</a></dt>
+	
+	                        <dd>Description</dd>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status green">online</p>
+	
+	                        <div class="hide more-info">                
+		                        <div class="dropdown">
+		                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <i class="icon-caret-down"></i></a>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Edit</a></li>
+		
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance.html">Project Name</a></dt>
+	
+	                        <dd>Description</dd>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status green">online</p>
+	
+	                        <div class="hide more-info">                
+		                        <div class="dropdown">
+		                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <i class="icon-caret-down"></i></a>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Edit</a></li>
+		
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance.html">Project Name</a></dt>
+	
+	                        <dd>Description</dd>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status green">online</p>
+	
+	                        <div class="hide more-info">                
+		                        <div class="dropdown">
+		                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <i class="icon-caret-down"></i></a>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Edit</a></li>
+		
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance.html">Project Name</a></dt>
+	
+	                        <dd>Description</dd>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status green">online</p>
+	
+	                        <div class="hide more-info">                
+		                        <div class="dropdown">
+		                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <i class="icon-caret-down"></i></a>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Edit</a></li>
+		
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance.html">Project Name</a></dt>
+	
+	                        <dd>Description</dd>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status green">online</p>
+	
+	                        <div class="hide more-info">                
+		                        <div class="dropdown">
+		                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <i class="icon-caret-down"></i></a>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Edit</a></li>
+		
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance.html">Project Name</a></dt>
+	
+	                        <dd>Description</dd>
+	                    </dl>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    
+	    <div class="footer-wrap">
+		    <footer class="container" id="main">
+		    	<div class="row">
+			    	<div class="command span1 right">
+					    <i class="icon-trash"></i>
+					    <p>Trash</p>
+				    </div>
+			    </div>
+		    </footer>
+	    </div>
+	    
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

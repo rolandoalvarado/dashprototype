@@ -1,0 +1,262 @@
+/* line 8, ../sass/main.sass */
+html {
+  font-size: 100%;
+}
+
+/* line 11, ../sass/main.sass */
+body {
+  font: 0.75em/1.5 "Lucida Grande", "Helvetica Neue", sans-serif;
+  color: #b4bac3;
+}
+
+/* line 15, ../sass/main.sass */
+input {
+  border-radius: 0 !important;
+}
+
+/* line 18, ../sass/main.sass */
+a {
+  color: #626c7c;
+}
+/* line 21, ../sass/main.sass */
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+/* line 25, ../sass/main.sass */
+h3 {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #626c7c;
+  font-weight: normal;
+}
+
+/* line 31, ../sass/main.sass */
+.left {
+  float: left;
+}
+
+/* line 34, ../sass/main.sass */
+.right {
+  float: right;
+}
+
+/* line 37, ../sass/main.sass */
+#header-wrap {
+  border-bottom: 1px solid #f2f2f2;
+  padding: 18px 0;
+}
+
+/* line 42, ../sass/main.sass */
+header#main .dropdown {
+  float: right;
+}
+
+/* line 46, ../sass/main.sass */
+nav#main a {
+  color: #b4bac3;
+  margin-right: 10px;
+}
+
+/* line 50, ../sass/main.sass */
+.notice-wrap {
+  padding: 9px 0 0;
+  background-color: #1790d2;
+  color: white;
+}
+
+/* line 55, ../sass/main.sass */
+#main-content {
+  margin-top: 25px;
+  padding-bottom: 90px;
+}
+/* line 59, ../sass/main.sass */
+#main-content header {
+  margin-bottom: 25px;
+  color: #626c7c;
+}
+/* line 63, ../sass/main.sass */
+#main-content header h2 {
+  font-weight: normal;
+  font-size: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+/* line 70, ../sass/main.sass */
+#main-content .status {
+  color: #b4bac3;
+}
+/* line 73, ../sass/main.sass */
+#main-content .status span {
+  margin-right: 10px;
+}
+
+/* line 78, ../sass/main.sass */
+#main-list .list-wrap dl {
+  font-size: 0.688em;
+}
+/* line 80, ../sass/main.sass */
+#main-list .list-wrap dt {
+  font-weight: normal;
+  color: #626c7c;
+}
+/* line 83, ../sass/main.sass */
+#main-list .list-wrap dd {
+  margin-left: 0;
+}
+/* line 86, ../sass/main.sass */
+#main-list .list-item {
+  background-color: #f2f2f2;
+  padding: 12px;
+  border-radius: 3px;
+  height: 116px;
+  position: relative;
+}
+/* line 93, ../sass/main.sass */
+#main-list .list-item h3 {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+/* line 98, ../sass/main.sass */
+#main-list .list-item:hover {
+  background-color: #ebebeb;
+}
+/* line 101, ../sass/main.sass */
+#main-list .add {
+  border: 2px dashed #f2f2f2;
+  background-color: white;
+  text-align: center;
+  font-size: 1.2em;
+}
+/* line 107, ../sass/main.sass */
+#main-list .add span {
+  position: relative;
+  top: 25%;
+}
+/* line 111, ../sass/main.sass */
+#main-list .click {
+  border: 3px solid #1790d2;
+  height: 110px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+/* line 116, ../sass/main.sass */
+#main-list .status {
+  position: absolute;
+  bottom: 0px;
+  left: 12px;
+  width: 10px;
+  height: 10px;
+  text-indent: -999px;
+  border-radius: 20px;
+}
+/* line 125, ../sass/main.sass */
+#main-list .green {
+  background-color: #81b822;
+}
+/* line 128, ../sass/main.sass */
+#main-list .red {
+  background-color: #e5172c;
+}
+/* line 131, ../sass/main.sass */
+#main-list .yellow {
+  background-color: #fbd035;
+}
+/* line 134, ../sass/main.sass */
+#main-list .attachment {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+/* line 139, ../sass/main.sass */
+#main-list .attachment li {
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 143, ../sass/main.sass */
+#vm-tab {
+  list-style: none;
+}
+/* line 146, ../sass/main.sass */
+#vm-tab a {
+  color: #b4bac3;
+}
+/* line 149, ../sass/main.sass */
+#vm-tab .active {
+  font-weight: bold;
+}
+/* line 152, ../sass/main.sass */
+#vm-tab .active a {
+  color: #626c7c;
+}
+
+/* line 155, ../sass/main.sass */
+#proj-create {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -440px;
+  margin-top: -197px;
+  width: 800px;
+  padding: 32px 40px 18px;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #f2f2f2;
+}
+/* line 168, ../sass/main.sass */
+#proj-create td, #proj-create th {
+  padding-left: 0;
+}
+/* line 171, ../sass/main.sass */
+#proj-create th {
+  font-weight: normal;
+  color: #626c7c;
+}
+/* line 175, ../sass/main.sass */
+#proj-create input {
+  width: 98%;
+}
+
+/* line 178, ../sass/main.sass */
+#info dl {
+  margin: 0 0 3px 0;
+}
+/* line 181, ../sass/main.sass */
+#info dt {
+  color: #626c7c;
+  font-weight: normal;
+}
+/* line 184, ../sass/main.sass */
+#info dd {
+  margin-left: 0;
+}
+
+/* line 187, ../sass/main.sass */
+.footer-wrap {
+  background-color: white;
+  padding: 18px 0 12px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  border-top: 1px solid #f2f2f2;
+  color: #626c7c;
+}
+/* line 197, ../sass/main.sass */
+.footer-wrap .command {
+  text-align: center;
+}
+/* line 200, ../sass/main.sass */
+.footer-wrap i {
+  font-size: 2em;
+  margin-bottom: 9px;
+}
+/* line 204, ../sass/main.sass */
+.footer-wrap p {
+  font-size: 0.75em;
+  margin-bottom: 0;
+}
