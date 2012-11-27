@@ -26,10 +26,6 @@
         	select[multiple=multiple] {
 	        	height: 300px
         	}
-        	
-        	.align-right {
-	        	text-align: right !important
-        	}
         </style>
     </head>
     <body>
@@ -37,126 +33,119 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         
-                
-        <div id="volume-list-attached" class="container hide new-modal" >
-        	<header>
-	        	<h3 class="left">Attached Volumes</h3>
-	        	
-	        	<p class="right"><a href="" class="btn show-new-vol">New Volume</a></p>
-	        	
-	        	<p class="right" style="margin-right: 5px"><a class="btn show-vol">Attach Volume</a></p>
-	        	
-        	</header>
-        	
+        <div id="volume-list" class="container hide">
+        	<h3>Volumes</h3>
 	        <table class="table">
 		        <thead>
 		        	<th>Name</th>
-		        	<th>Attached to</th>
 		        	<th>Description</th>
-		        	<th>Size</th>
-		        	<th>Status</th>
-		        	<th class="align-right">Actions</th>
+		        	<th>Actions</th>
 		        </thead>
 		        <tbody>
 		        	<tr>
 				        <td>Volume 1</td>
-				        <td>Instance 1</td>
-				        <td>This is attached to Instance 1</td>
-				        <td>1 GB</td>
-				        <td>Online</td>
-				        <td class="align-right">Detach <i class="icon-caret-down"></i></td>
-			        </tr>
-		        </tbody>
-	        </table>
-        </div>
-        
-        <div id="volume-list" class="container hide new-modal" >
-        	<header>
-	        	<h3 class="left">Volumes</h3>
-	        	
-	        	<p class="right"><a href="" class="btn show-new-vol">New Volume</a></p>
-        	</header>
-        	
-	        <table class="table">
-		        <thead>
-		        	<th>Name</th>
-		        	<th>Attached to</th>
-		        	<th>Description</th>
-		        	<th>Size</th>
-		        	<th>Status</th>
-		        	<th class="align-right">Actions</th>
-		        </thead>
-		        <tbody>
-		        	<tr>
-				        <td>Volume 1</td>
-				        <td>Instance 1</td>
-				        <td>This is attached to Instance 1</td>
-				        <td>1 GB</td>
-				        <td>Online</td>
-				        <td class="align-right">Attach <i class="icon-caret-down"></i></td>
+				        <td>This is a new volume</td>
+				        <td>Actions <i class="icon-caret-down"></i></td>
 			        </tr>
 			        
 			        <tr>
 				        <td>Volume 2</td>
-				        <td>Instance 2</td>
-				        <td>This is attached to Instance 2</td>
-				        <td>1 GB</td>
-				        <td>Online</td>
-				        <td class="align-right">Attach <i class="icon-caret-down"></i></td>
+				        <td>This is a new volume</td>
+				        <td>Actions <i class="icon-caret-down"></i></td>
 			        </tr>
 			        
 			        <tr>
 				        <td>Volume 3</td>
-				        <td>Instance 3</td>
-				        <td>This is attached to Instance 3</td>
-				        <td>1 GB</td>
-				        <td>Online</td>
-				        <td class="align-right">Attach <i class="icon-caret-down"></i></td>
+				        <td>This is a new volume</td>
+				        <td>Actions <i class="icon-caret-down"></i></td>
 			        </tr>
 		        </tbody>
 	        </table>
         </div>
         
-        <div id="new-volume" class="container new-modal" >
-        	<header><input type="text" placeholder="Volume Name" id="proj-name"></header>
-        	
-        	<p>Click to add a description</p>
-        	
-        	<form class="form clearfix">
-	        	<div class="control-group">
-	                <label class="control-label">Size</label>
+        <div id="proj-create" class="container hide">
+	        <div class="row-fluid">
+	            <div class="span12">
+	                <header><input type="text" placeholder="Instance Name" id="proj-name"></header>
 	
-	                <div class="controls">
-	                    <input type="range" id="inputPassword" placeholder="Password">
+	                <form class="form clearfix">
+	                    <div class="control-group left">
+	                        <div class="controls">
+	                            <select multiple="multiple">
+								  <option>Choose Image</option>
+								  <option>Image 1</option>
+								  <option>Image 2</option>
+								  <option>Image 3</option>
+								  <option>Image 4</option>
+								</select>
+	                        </div>
+	                    </div>
+	                    <div class="right">
+	                    <div class="control-group">
+	                        <label class="control-label">Flavor</label>
+	
+	                        <div class="controls">
+	                            <input type="range" id="inputPassword" placeholder="Password">
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="control-group">
+	                        <label class="control-label">Count</label>
+	
+	                        <div class="controls">
+	                            <input type="range" id="inputPassword" placeholder="Password">
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="control-group">
+	                        <label class="checkbox">
+							  <input type="checkbox" value="">
+							  Security Group 1
+							</label>
+							
+							<label class="checkbox">
+							  <input type="checkbox" value="">
+							  Security Group 2
+							</label>
+							
+							<label class="checkbox">
+							  <input type="checkbox" value="">
+							  Security Group 3
+							</label>
+	                    </div>
+	                    
+	                    <div class="control-group">
+	                        <label class="control-label">Keypair</label>
+	
+	                        <div class="controls">
+	                            <select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="control-group">
+	
+	                        <div class="controls">
+	                            <input type="text" placeholder="Password" />
+	                        </div>
+	                    </div>
+</div>	                </form>
+	
+	                <div class="right clearfix">
+	                    <button class="btn btn-small" type="button" id="cancel">Cancel</button> <button class="btn btn-primary btn-small" type="button" id="create">Create Instance</button>
 	                </div>
 	            </div>
-	            
-	            <div class="control-group">
-	                <label class="control-label">Attach To (optional)</label>
-	
-	                <div class="controls">
-	                    <select>
-						  <option>Instance 1</option>
-						  <option>Instance 2</option>
-						  <option>Instance 3</option>
-						  <option>Instance 4</option>
-						  <option>Instance 5</option>
-						</select>
-	                </div>
-	            </div>
-        	</form>
-        	
-        	<div class="right clearfix">
-	                    <button class="btn btn-small" type="button" id="cancel">Cancel</button> <button class="btn btn-primary btn-small" type="button" id="create">Create Volume</button>
 	        </div>
-	        
-        </div>
-
-        
+	    </div>
 	    
         <div id="header-wrap">
 	        <header class="clearfix container" id="main">
-	            <nav id="main" class="left"><strong><a href="projects.html" id="active">Projects</a></strong> <a href="">Images</a> <a href="">Users</a> <a href="">Billing</a> <a href="">Resources</a> <a href="">Support</a></nav>
+	            <nav id="main" class="left"><a href="index.html" id="active">Projects</a> <a href="">Images</a> <a href="">Users</a> <a href="">Billing</a> <a href="">Resources</a> <a href="">Support</a></nav>
 	
 	            <div class="dropdown">
 	                Good Morning, Hunter Nield <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-caret-down"></i></a>
@@ -200,7 +189,7 @@
 	
 	            <div id="main-list">
 	                <div class="span2">
-	                    <div class="list-item add" id="instance-new">
+	                    <div class="list-item add">
 	                        <span>Create New Instance</span>
 	                    </div>
 	                </div>
@@ -216,7 +205,7 @@
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
 		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="" class="show-vol">Attach Volume</a></li>
+		                                <li><a href="">Attach Volume</a></li>
 		
 		                                <li><a href="">Attach Security Group</a></li>
 		                                
@@ -235,14 +224,14 @@
 		                        <ul class="attachment">
 			                        <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 
-			                         <li><a href=""><i class="icon-lock"></i> 23</a></li>
-			                         <li><a href=""><i class="icon-globe"></i> 300</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
 		                        </ul>
 	                        </div>
 	                    </div>
 	
 	                    <dl>
-	                        <dt><a href="instance-details.html">Instance Name 1</a></dt>
+	                        <dt><a href="instance-details.html">Instance Name</a></dt>
 	                    </dl>
 	                </div>
 	
@@ -257,7 +246,7 @@
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
 		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="" class="show-vol">Attach Volume</a></li>
+		                                <li><a href="">Attach Volume</a></li>
 		
 		                                <li><a href="">Attach Security Group</a></li>
 		                                
@@ -276,92 +265,9 @@
 		                        <ul class="attachment">
 			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 
-			                         <li><a href=""><i class="icon-lock"></i> 23</a></li>
-			                         <li><a href=""><i class="icon-globe"></i> 300</a></li>		                        </ul>
-		                        
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance-details.html">Instace Name 2</a></dt>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item">
-	                        <p class="status green">online</p>
-	
-	                        <div class="hide more-info">        
-	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
-	                        	         
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="" class="show-vol">Attach Volume</a></li>
-		
-		                                <li><a href="">Attach Security Group</a></li>
-		                                
-		                                <li><a href="">Attach Floating IP</a></li>
-		                                
-		                                <li class="divider"></li>
-		                                
-		                                <li><a href="">Restart</a></li>
-		                                
-		                                <li><a href="">Pause</a></li>
-		                                
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-		                        <ul class="attachment">
-			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-
-			                         <li><a href=""><i class="icon-lock"></i> 23</a></li>
-			                         <li><a href=""><i class="icon-globe"></i> 300</a></li>		                        </ul>
-		                        
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance-details.html">Instace Name 3</a></dt>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item">
-	                        <p class="status green">online</p>
-	
-	                        <div class="hide more-info">        
-	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
-	                        	         
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="" class="show-vol">Attach Volume</a></li>
-		
-		                                <li><a href="">Attach Security Group</a></li>
-		                                
-		                                <li><a href="">Attach Floating IP</a></li>
-		                                
-		                                <li class="divider"></li>
-		                                
-		                                <li><a href="">Restart</a></li>
-		                                
-		                                <li><a href="">Pause</a></li>
-		                                
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-		                        <ul class="attachment">
-			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-
-			                         <li><a href=""><i class="icon-lock"></i> 23</a></li>
-			                         <li><a href=""><i class="icon-globe"></i> 300</a></li>		                        </ul>
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
+		                        </ul>
 		                        
 		                        
 	                        </div>
@@ -383,7 +289,7 @@
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
 		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="" class="show-vol">Attach Volume</a></li>
+		                                <li><a href="">Attach Volume</a></li>
 		
 		                                <li><a href="">Attach Security Group</a></li>
 		                                
@@ -402,8 +308,9 @@
 		                        <ul class="attachment">
 			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 
-			                         <li><a href=""><i class="icon-lock"></i> 23</a></li>
-			                         <li><a href=""><i class="icon-globe"></i> 300</a></li>		                        </ul>
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
+		                        </ul>
 		                        
 		                        
 	                        </div>
@@ -425,7 +332,7 @@
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
 		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="" class="show-vol">Attach Volume</a></li>
+		                                <li><a href="">Attach Volume</a></li>
 		
 		                                <li><a href="">Attach Security Group</a></li>
 		                                
@@ -444,8 +351,9 @@
 		                        <ul class="attachment">
 			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 
-			                         <li><a href=""><i class="icon-lock"></i> 23</a></li>
-			                         <li><a href=""><i class="icon-globe"></i> 300</a></li>		                        </ul>
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
+		                        </ul>
 		                        
 		                        
 	                        </div>
@@ -467,7 +375,7 @@
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
 		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="" class="show-vol">Attach Volume</a></li>
+		                                <li><a href="">Attach Volume</a></li>
 		
 		                                <li><a href="">Attach Security Group</a></li>
 		                                
@@ -486,8 +394,9 @@
 		                        <ul class="attachment">
 			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 
-			                         <li><a href=""><i class="icon-lock"></i> 23</a></li>
-			                         <li><a href=""><i class="icon-globe"></i> 300</a></li>		                        </ul>
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
+		                        </ul>
 		                        
 		                        
 	                        </div>
@@ -509,7 +418,7 @@
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
 		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="" class="show-vol">Attach Volume</a></li>
+		                                <li><a href="">Attach Volume</a></li>
 		
 		                                <li><a href="">Attach Security Group</a></li>
 		                                
@@ -528,8 +437,9 @@
 		                        <ul class="attachment">
 			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 
-			                         <li><a href=""><i class="icon-lock"></i> 23</a></li>
-			                         <li><a href=""><i class="icon-globe"></i> 300</a></li>		                        </ul>
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
+		                        </ul>
 		                        
 		                        
 	                        </div>
@@ -551,7 +461,7 @@
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
 		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="" class="show-vol">Attach Volume</a></li>
+		                                <li><a href="">Attach Volume</a></li>
 		
 		                                <li><a href="">Attach Security Group</a></li>
 		                                
@@ -570,8 +480,9 @@
 		                        <ul class="attachment">
 			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 
-			                         <li><a href=""><i class="icon-lock"></i> 23</a></li>
-			                         <li><a href=""><i class="icon-globe"></i> 300</a></li>		                        </ul>
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
+		                        </ul>
 		                        
 		                        
 	                        </div>
@@ -593,7 +504,7 @@
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
 		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="" class="show-vol">Attach Volume</a></li>
+		                                <li><a href="">Attach Volume</a></li>
 		
 		                                <li><a href="">Attach Security Group</a></li>
 		                                
@@ -612,8 +523,9 @@
 		                        <ul class="attachment">
 			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 
-			                         <li><a href=""><i class="icon-lock"></i> 23</a></li>
-			                         <li><a href=""><i class="icon-globe"></i> 300</a></li>		                        </ul>
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
+		                        </ul>
 		                        
 		                        
 	                        </div>
@@ -635,7 +547,7 @@
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
 		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="" class="show-vol">Attach Volume</a></li>
+		                                <li><a href="">Attach Volume</a></li>
 		
 		                                <li><a href="">Attach Security Group</a></li>
 		                                
@@ -654,8 +566,9 @@
 		                        <ul class="attachment">
 			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 
-			                         <li><a href=""><i class="icon-lock"></i> 23</a></li>
-			                         <li><a href=""><i class="icon-globe"></i> 300</a></li>		                        </ul>
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
+		                        </ul>
 		                        
 		                        
 	                        </div>
@@ -677,7 +590,7 @@
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
 		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="" class="show-vol">Attach Volume</a></li>
+		                                <li><a href="">Attach Volume</a></li>
 		
 		                                <li><a href="">Attach Security Group</a></li>
 		                                
@@ -696,8 +609,9 @@
 		                        <ul class="attachment">
 			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 
-			                         <li><a href=""><i class="icon-lock"></i> 23</a></li>
-			                         <li><a href=""><i class="icon-globe"></i> 300</a></li>		                        </ul>
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
+		                        </ul>
 		                        
 		                        
 	                        </div>
@@ -719,7 +633,7 @@
 		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
 		
 		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="" class="show-vol">Attach Volume</a></li>
+		                                <li><a href="">Attach Volume</a></li>
 		
 		                                <li><a href="">Attach Security Group</a></li>
 		                                
@@ -738,8 +652,95 @@
 		                        <ul class="attachment">
 			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 
-			                         <li><a href=""><i class="icon-lock"></i> 23</a></li>
-			                         <li><a href=""><i class="icon-globe"></i> 300</a></li>		                        </ul>
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
+		                        </ul>
+		                        
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance-details.html">Instace Name</a></dt>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status green">online</p>
+	
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
+		                        <div class="dropdown">
+		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Attach Volume</a></li>
+		
+		                                <li><a href="">Attach Security Group</a></li>
+		                                
+		                                <li><a href="">Attach Floating IP</a></li>
+		                                
+		                                <li class="divider"></li>
+		                                
+		                                <li><a href="">Restart</a></li>
+		                                
+		                                <li><a href="">Pause</a></li>
+		                                
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+		                        <ul class="attachment">
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
+		                        </ul>
+		                        
+		                        
+	                        </div>
+	                    </div>
+	
+	                    <dl>
+	                        <dt><a href="instance-details.html">Instace Name</a></dt>
+	                    </dl>
+	                </div>
+	
+	                <div class="span2 list-wrap">
+	                    <div class="list-item">
+	                        <p class="status green">online</p>
+	
+	                        <div class="hide more-info">        
+	                        	<a href="instance-details.html" class="view"><i class="icon-plus-sign"></i></a>
+	                        	         
+		                        <div class="dropdown">
+		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
+		
+		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		                                <li><a href="">Attach Volume</a></li>
+		
+		                                <li><a href="">Attach Security Group</a></li>
+		                                
+		                                <li><a href="">Attach Floating IP</a></li>
+		                                
+		                                <li class="divider"></li>
+		                                
+		                                <li><a href="">Restart</a></li>
+		                                
+		                                <li><a href="">Pause</a></li>
+		                                
+		                                <li><a href="">Delete</a></li>
+		                            </ul>
+		                        </div>
+		                        
+		                        <ul class="attachment">
+			                         <li><a href="" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+
+			                         <li><a href="" class="show-vol"><i class="icon-lock"></i> 23</a></li>
+			                         <li><a href="" class="show-vol"><i class="icon-globe"></i> 300</a></li>
+		                        </ul>
 		                        
 		                        
 	                        </div>
@@ -793,11 +794,6 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-    </body>
-</html>
-js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
     </body>

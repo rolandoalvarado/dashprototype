@@ -256,10 +256,7 @@ nav#main a {
 
 /* line 209, ../sass/main.sass */
 #proj-create,
-#volume-list,
-#volume-list-attached,
-#new-volume,
-#attach-volume {
+#volume-list {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -272,53 +269,42 @@ nav#main a {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   border-top: 1px solid #f2f2f2;
 }
-/* line 226, ../sass/main.sass */
+/* line 223, ../sass/main.sass */
 #proj-create td, #proj-create th,
 #volume-list td,
-#volume-list th,
-#volume-list-attached td,
-#volume-list-attached th,
-#new-volume td,
-#new-volume th,
-#attach-volume td,
-#attach-volume th {
+#volume-list th {
   padding-left: 0;
 }
-/* line 229, ../sass/main.sass */
+/* line 226, ../sass/main.sass */
 #proj-create th,
-#volume-list th,
-#volume-list-attached th,
-#new-volume th,
-#attach-volume th {
+#volume-list th {
   font-weight: normal;
   color: #626c7c;
 }
-/* line 233, ../sass/main.sass */
+/* line 230, ../sass/main.sass */
 #proj-create input[id=proj-name],
-#volume-list input[id=proj-name],
-#volume-list-attached input[id=proj-name],
-#new-volume input[id=proj-name],
-#attach-volume input[id=proj-name] {
+#volume-list input[id=proj-name] {
   width: 98%;
 }
 
-/* line 236, ../sass/main.sass */
+/* line 233, ../sass/main.sass */
 #info dl {
   margin: 0 0 3px 0;
 }
-/* line 239, ../sass/main.sass */
+/* line 236, ../sass/main.sass */
 #info dt {
   color: #626c7c;
   font-weight: normal;
 }
-/* line 242, ../sass/main.sass */
+/* line 239, ../sass/main.sass */
 #info dd {
   margin-left: 0;
 }
 
-/* line 245, ../sass/main.sass */
+/* line 242, ../sass/main.sass */
 .footer-wrap {
   background-color: white;
+  padding: 18px 0 12px;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -326,23 +312,16 @@ nav#main a {
   border-top: 1px solid #f2f2f2;
   color: #626c7c;
 }
-/* line 254, ../sass/main.sass */
+/* line 252, ../sass/main.sass */
 .footer-wrap .command {
   text-align: center;
-  padding: 18px 5px 12px;
-  margin-right: 0;
-  cursor: pointer;
 }
-/* line 260, ../sass/main.sass */
-.footer-wrap .command:hover {
-  background-color: #edeef0;
-}
-/* line 263, ../sass/main.sass */
+/* line 255, ../sass/main.sass */
 .footer-wrap i {
   font-size: 2em;
   margin-bottom: 9px;
 }
-/* line 267, ../sass/main.sass */
+/* line 259, ../sass/main.sass */
 .footer-wrap p {
   font-size: 0.75em;
   margin-bottom: 0;
