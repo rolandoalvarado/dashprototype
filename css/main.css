@@ -347,3 +347,13 @@ nav#main a {
   font-size: 0.75em;
   margin-bottom: 0;
 }
+
+/* line 271, ../sass/main.sass */
+.help-block {
+  color: #cccccc;
+}
+
+/* line 275, ../sass/main.sass */
+label {
+  color: #626c7c;
+}

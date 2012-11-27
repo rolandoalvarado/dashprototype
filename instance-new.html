@@ -24,8 +24,12 @@
         	}
         	
         	select[multiple=multiple] {
-	        	height: 300px
+	        	height: 380px;
+	        	box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
+	        	width: 400px;
         	}
+        	
+        	
         </style>
     </head>
     <body>
@@ -72,7 +76,6 @@
 	                    <div class="control-group left">
 	                        <div class="controls">
 	                            <select multiple="multiple">
-								  <option>Choose Image</option>
 								  <option>Image 1</option>
 								  <option>Image 2</option>
 								  <option>Image 3</option>
@@ -85,7 +88,7 @@
 	                        <label class="control-label">Flavor</label>
 	
 	                        <div class="controls">
-	                            <input type="range" id="inputPassword" placeholder="Password">
+	                        	Small <input type="range" id="inputPassword"> 
 	                        </div>
 	                    </div>
 	                    
@@ -93,29 +96,32 @@
 	                        <label class="control-label">Count</label>
 	
 	                        <div class="controls">
-	                            <input type="range" id="inputPassword" placeholder="Password">
+	                            1 <input type="range" id="inputPassword">
 	                        </div>
 	                    </div>
 	                    
 	                    <div class="control-group">
-	                        <label class="checkbox">
+	                    	<label class="control-label">Security Group</label>
+	                    	
+	                        <div class="checkbox">
 							  <input type="checkbox" value="">
 							  Security Group 1
-							</label>
+							</div>
 							
-							<label class="checkbox">
+							<div class="checkbox">
 							  <input type="checkbox" value="">
 							  Security Group 2
-							</label>
+							</div>
 							
-							<label class="checkbox">
+							<div class="checkbox">
 							  <input type="checkbox" value="">
 							  Security Group 3
-							</label>
+							</div>
 	                    </div>
 	                    
 	                    <div class="control-group">
 	                        <label class="control-label">Keypair</label>
+	                        
 	
 	                        <div class="controls">
 	                            <select>
@@ -125,19 +131,24 @@
 									<option>4</option>
 									<option>5</option>
 								</select>
+								
+								<span class="help-block">A keypair can be added in Settings</span>
 	                        </div>
 	                    </div>
 	                    
 	                    <div class="control-group">
+	                    
+	                    	<label class="control-label">Password  (optional)</label>
 	
 	                        <div class="controls">
-	                            <input type="text" placeholder="Password" />
+	                            <input type="text" placeholder="New Admin Password" />
+	                            <span class="help-block">Windows instances currently do not allow passwords to be set</span>
 	                        </div>
 	                    </div>
 </div>	                </form>
 	
 	                <div class="right clearfix">
-	                    <button class="btn btn-small" type="button" id="cancel">Cancel</button> <button class="btn btn-primary btn-small" type="button" id="create">Create Instance</button>
+	                    <button class="btn btn-small" type="button" id="cancel">Cancel</button> <a class="btn btn-primary btn-small" type="button" href="instance-created.html">Create Instance</a>
 	                </div>
 	            </div>
 	        </div>

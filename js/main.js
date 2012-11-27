@@ -13,12 +13,18 @@ $(document).ready(function(){
 	});
 	
 	$('#cancel').click(function(){
-    	$('#proj-create').fadeOut('fast');
+    	$('.new-modal').fadeOut('fast');
 	});
 	
+/*
 	$('#create').click(function(){
 		$('#proj-create').fadeOut('fast');
     	$('.notice-wrap').slideDown('fast').delay(3000).slideUp('fast');
+	});
+*/
+	
+	$('#vol-create').click(function(){
+		$('.new-modal').fadeOut('fast');
 	});
 	
 	$('footer .show-vol').click(function(){
