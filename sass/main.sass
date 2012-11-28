@@ -35,8 +35,12 @@ h3
 	float: right
 
 #header-wrap
+	background: url(../img/headerdrop.png) no-repeat center 0px 
 	border-bottom: 1px solid darken($white, 5%)
 	padding: 18px 0
+	
+	&.clicked
+		background: url(../img/headerdrop.png) no-repeat center 45px
 
 header#main		
 	.dropdown
@@ -126,6 +130,46 @@ nav#main
 			border: 3px solid $blue
 			height: 122px
 			box-shadow: inset 0 0 5px rgba(0,0,0,0.2)
+			
+		&.red,
+		&.yellow,
+		&.green,
+		&.blue,
+		&.idle
+			color: $white
+			
+			.init-status
+				position: relative
+				top: 36px
+				text-align: center
+				
+				& i
+					font-size: 36px
+					text-indent: -4px
+					
+			span
+				display: block
+				margin-top: 18px
+		&.idle
+			color: lighten($main-color, 30%)
+			
+		&.blue
+			color: $main-color
+		
+		&.idle
+			border: 2px dashed darken($white, 5%)
+			background-color: $white
+			height: 123px
+	
+		
+		&.red:hover,
+		&.yellow:hover,
+		&.green:hover,
+		&.idle:hover,
+		&.blue:hover
+			.init-status
+				display: none
+			
 		
 	.add
 		border: 2px dashed darken($white, 5%)
@@ -152,7 +196,7 @@ nav#main
 		left: 12px
 		width: 10px
 		height: 10px
-		text-indent: -999px
+		text-indent: -9999px
 		border-radius: 20px
 		
 	.green
