@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/font-awesome.css">
         <link rel="stylesheet" href="css/main.css">
+        
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -39,10 +40,10 @@
 	        </header>
 	    </div>
 	    
-	    <div class="notice-wrap clearfix hide">
+	    <div class="notice-wrap clearfix">
 	    	<div id="notice" class="container">
 	    		<div class="row">
-		    		<p class="span12">Project has been launched</p>
+		    		<p class="span12"><i class="icon-warning-sign"></i> <strong>VM Name</strong> has stopped running!</p>		    	
 		    	</div>
 	    	</div>
 	    </div>
@@ -50,25 +51,19 @@
 	    <div class="container" id="main-content">
 	        <div class="row">
 	            <header class="clearfix">
-	                <h2 class="span2"><a href="projects.html">Project Name</a></h2>
-	
-	                <h2 class="span2"><a href="instance.html">Instance Name</a></h2>
-	
-	                <div class="right span4" id="unified-notice">
-	                    <a href=""><i class="icon-warning-sign"></i> <strong>VM Name</strong> has stopped running!</a>
-	                </div>
+	                <h2 class="span4"><a href="projects.html">Instace 1</a> (Active)</h2>
 	            </header>
 	
 	            <ul class="span2" id="vm-tab">
 	                <li class="active"><a href="#info" data-toggle="tab">Info</a></li>
-	
-	                <li><a href="#diagram" data-toggle="tab">Diagram</a></li>
+	                
+	                <li><a href="#monitor" data-toggle="tab">Monitor</a></li>
 	            </ul>
 	
 	            <div class="span10 tab-content">
 	                <div class="tab-pane active" id="info">
 	                    <div class="row">
-	                        <div class="span4">
+	                        <div class="span6">
 	                            <dl>
 	                                <dt>ID</dt>
 	
@@ -136,22 +131,25 @@
 	                            </dl>
 	                        </div>
 	
-	                        <div class="span6">
-	                        	<h3>CPU Time</h3>
-							    <p><img src="img/graph.png" alt="graph" width="460" height="243"></p>
-							    
-							    <h3>Network</h3>
-							    <p><img src="img/graph.png" alt="graph" width="460" height="243"></p>
-							    
-							    <h3>Block I/O</h3>
-							    <p><img src="img/graph.png" alt="graph" width="460" height="243"></p>
+	                        <div class="span4" id="diagram">
+	                        	<p><i class="icon-cloud"></i> <span>Internet</span></p>
+	                        	<p><i class="icon-lock"></i> <span>Security Group</span></p>
+	                        	<p><i class="icon-sign-blank"></i> <span>Instance 1</span></p>
+	                        	<p><i class="icon-hdd"></i> <span>Volume 1</span></p>
+	                       
 	                        </div>
 	                    </div>
 	                </div>
 	
-	                <div class="tab-pane" id="diagram">
-	                    <img src="img/diagram.png" alt="diagram" width="780" height="700">
-	                </div>
+	                <div class="tab-pane" id="monitor">
+	                    <h3>CPU Time</h3>
+					    <p><img src="img/graph.png" alt="graph"></p>
+					    
+					    <h3>Network</h3>
+					    <p><img src="img/graph.png" alt="graph"></p>
+					    
+					    <h3>Block I/O</h3>
+					    <p><img src="img/graph.png" alt="graph"></p>
 	            </div>
 	        </div>
 	    </div>
@@ -165,22 +163,12 @@
         <script src="js/main.js"></script>
 </body>
 </html>
+n.js"></script>
+</body>
+</html>
    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        
-        <!-- Start Visual Website Optimizer Asynchronous Code -->
-		<script type='text/javascript'>
-		var _vwo_code=(function(){
-		var account_id=31958,
-		settings_tolerance=2000,
-		library_tolerance=1500,
-		use_existing_jquery=false,
-		// DO NOT EDIT BELOW THIS LINE
-		f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
-		</script>
-		<!-- End Visual Website Optimizer Asynchronous Code -->
-
 </body>
 </html>
