@@ -1,3 +1,7 @@
+.is-hidden {
+  display: none !important;
+}
+
 /* line 8, ../sass/main.sass */
 html {
   font-size: 100%;

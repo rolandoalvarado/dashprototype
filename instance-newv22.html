@@ -25,19 +25,19 @@
 
           function updateFlavor(value) {
             var flavor, vcpu, ram, disk;
-            if(value == 2) {
+            if(value == "medium") {
               flavor = "Medium";
               vcpu = "2 vCPUs";
               ram = "4096 MB";
               disk = "20 GB";
             }
-            else if(value == 3) {
+            else if(value == "large") {
               flavor = "Large";
               vcpu = "4 vCPUs";
               ram = "8102 MB";
               disk = "30 GB";
             }
-            else if(value == 4) {
+            else if(value == "xlarge") {
               flavor = "Extra Large";
               vcpu = "8 vCPU";
               ram = "16384 MB";
@@ -175,18 +175,20 @@
 						    <div class="controls">
 						    	<p>
 						    	  <span id="flavor-value">Small</span>
-						    	  <a href="#" class="sub-command" id="edit-flavor">Edit</a>
-						    	  <a href="#" class="is-hidden" id="save-flavor">Save</a>
-						    	  <a href="#" class="is-hidden" id="cancel-flavor">Cancel</a>
+						    	  <select id="flavor-select" class="is-hidden" onchange="updateFlavor(this.value);">
+                      <option value ="small" selected>Small</option>
+                      <option value ="medium">Medium</option>
+                      <option value ="large">Large</option>
+                      <option value ="xlarge">Extra Large</option>
+                    </select>
+						    	  <a href="#" class="sub-command" id="edit-flavor2">Edit</a>
+						    	  <a href="#" class="is-hidden" id="save-flavor2">Save</a>
+						    	  <a href="#" class="is-hidden" id="cancel-flavor2">Cancel</a>
 						    	</p>
 						    </div>
 						</div>
 
-						<div id="flavor-options" class="sub-choice is-hidden">
-							<div class="controls">
-	              <input type="range" id="flavor-range" min="1" max="4" step="1" value="1" onchange="updateFlavor(this.value);">
-	            </div>
-
+						<div id="flavor-options2" class="sub-choice is-hidden">
 							<div class="control-group">
 							    <label class="control-label" for="vCPU">vCPU</label>
 
