@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Projects</title>
+        <title>Instance</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
@@ -17,17 +17,146 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        
+        <style type="text/css" media="screen">
+        	#proj-create {
+        		top: 270px
+        	}
+        	
+        	select[multiple=multiple] {
+	        	height: 300px
+        	}
+        	
+        	.align-right {
+	        	text-align: right !important
+        	}
+        </style>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         
+                
+        <div id="volume-list-attached" class="container hide new-modal" >
+        	<header>
+	        	<h3 class="left">Attached Volumes</h3>
+	        	
+	        	<p class="right"><a href="" class="btn show-new-vol">New Volume</a></p>
+	        	
+	        	<p class="right" style="margin-right: 5px"><a class="btn show-vol">Attach Volume</a></p>
+	        	
+        	</header>
+        	
+	        <table class="table">
+		        <thead>
+		        	<th>Name</th>
+		        	<th>Attached to</th>
+		        	<th>Description</th>
+		        	<th>Size</th>
+		        	<th>Status</th>
+		        	<th class="align-right">Actions</th>
+		        </thead>
+		        <tbody>
+		        	<tr>
+				        <td>Volume 1</td>
+				        <td>Instance 1</td>
+				        <td>This is attached to Instance 1</td>
+				        <td>1 GB</td>
+				        <td>Online</td>
+				        <td class="align-right">Detach <i class="icon-caret-down"></i></td>
+			        </tr>
+		        </tbody>
+	        </table>
+        </div>
+        
+        <div id="volume-list" class="container hide new-modal" >
+        	<header>
+	        	<h3 class="left">Volumes</h3>
+	        	
+	        	<p class="right"><a href="" class="btn show-new-vol">New Volume</a></p>
+        	</header>
+        	
+	        <table class="table">
+		        <thead>
+		        	<th>Name</th>
+		        	<th>Attached to</th>
+		        	<th>Description</th>
+		        	<th>Size</th>
+		        	<th>Status</th>
+		        	<th class="align-right">Actions</th>
+		        </thead>
+		        <tbody>
+		        	<tr>
+				        <td>Volume 1</td>
+				        <td>Instance 1</td>
+				        <td>This is attached to Instance 1</td>
+				        <td>1 GB</td>
+				        <td>Online</td>
+				        <td class="align-right">Attach <i class="icon-caret-down"></i></td>
+			        </tr>
+			        
+			        <tr>
+				        <td>Volume 2</td>
+				        <td>Instance 2</td>
+				        <td>This is attached to Instance 2</td>
+				        <td>1 GB</td>
+				        <td>Online</td>
+				        <td class="align-right">Attach <i class="icon-caret-down"></i></td>
+			        </tr>
+			        
+			        <tr>
+				        <td>Volume 3</td>
+				        <td>Instance 3</td>
+				        <td>This is attached to Instance 3</td>
+				        <td>1 GB</td>
+				        <td>Online</td>
+				        <td class="align-right">Attach <i class="icon-caret-down"></i></td>
+			        </tr>
+		        </tbody>
+	        </table>
+        </div>
+        
+        <div id="new-volume" class="container new-modal hide" >
+        	<header><input type="text" placeholder="Volume Name" id="proj-name"></header>
+        	
+        	<p>Click to add a description</p>
+        	
+        	<form class="form clearfix">
+	        	<div class="control-group">
+	                <label class="control-label">Size</label>
+	
+	                <div class="controls">
+	                    <input type="range" id="inputPassword" placeholder="Password">
+	                </div>
+	            </div>
+	            
+	            <div class="control-group">
+	                <label class="control-label">Attach To (optional)</label>
+	
+	                <div class="controls">
+	                    <select>
+						  <option>Instance 1</option>
+						  <option>Instance 2</option>
+						  <option>Instance 3</option>
+						  <option>Instance 4</option>
+						  <option>Instance 5</option>
+						</select>
+	                </div>
+	            </div>
+        	</form>
+        	
+        	<div class="right clearfix">
+	                    <button class="btn btn-small" type="button" id="cancel">Cancel</button> <button class="btn btn-primary btn-small" type="button" id="vol-create">Create Volume</button>
+	        </div>
+	        
+        </div>
+
         
 	    
         <div id="header-wrap">
 	        <header class="clearfix container" id="main">
-	            <nav id="main" class="left"><strong><a href="projects.html">Projects</a></strong> <a href="">Images</a> <a href="">Users</a> <a href="">Billing</a> <a href="">Resources</a> <a href="">Support</a></nav>
+	            <nav id="main" class="left"><strong><a href="projects.html" id="active">Projects</a></strong> <a href="">Images</a> <a href="">Users</a> <a href="">Billing</a> <a href="">Resources</a> <a href="">Support</a></nav>
 	
 	            <div class="dropdown">
 	                Good Morning, Hunter Nield <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-caret-down"></i></a>
@@ -41,14 +170,6 @@
 	        </header>
 	    </div>
 	    
-	     <div class="notice-wrap clearfix hide red">
-	    	<div id="notice" class="container">
-	    		<div class="row">
-		    		<p class="span12"><i class="icon-warning-sign"></i> <strong>Instance 1</strong> has stopped running!</p>		    	
-		    	</div>
-	    	</div>
-	    </div>
-	    
 	    <div class="notice-wrap clearfix">
 	    	<div id="notice" class="container">
 	    		<div class="row">
@@ -60,17 +181,7 @@
 	    <div class="container" id="main-content">
 	        <div class="row">
 	            <header class="clearfix">
-	                <h2 class="span2">Project</h2>
-	
-	                <!--
-<div class="span3 status">
-	                    <span>5 Running</span> <span>1 Error</span> <span>1 Warning</span>
-	                </div>
-	
-	                <div class="right span4" id="unified-notice">
-	                    <a href=""><i class="icon-warning-sign"></i> <strong>VM Name</strong> has stopped running!</a>
-	                </div>
--->
+	                <h2 class="span3">New Project Name</h2>
 	                
 	                <div class="right span2" id="search-bar">
 		                <i class="icon-search"></i> <input type="text" placeholder="Search&hellip;" />
@@ -79,342 +190,9 @@
 	
 	            <div id="main-list">
 	                <div class="span2">
-	                    <div class="list-item add" id="projects-new">
-	                        <span>Create New Project</span>
+	                    <div class="list-item add">
+	                        <span><a href="projects-instance-new.html">Create New Instance</a></span>
 	                    </div>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item red">
-	                        <p class="init-status"><i class="icon-bar-chart"></i> <span>Critical</span></p>
-	
-	                        <div class="hide more-info">    
-	                        	<a href="instance.html" class="view"><i class="icon-plus-sign"></i></a>  
-	                        	              
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="">Edit</a></li>
-		
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance.html">Project Name</a></dt>
-	
-	                        <dd>Description</dd>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item yellow">
-	                        <p class="init-status"><i class="icon-warning-sign"></i> <span>Error</span></p>
-	                        <div class="hide more-info">    
-	                        	<a href="instance.html" class="view"><i class="icon-plus-sign"></i></a>  
-	                        	              
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="">Edit</a></li>
-		
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance.html">Project Name</a></dt>
-	
-	                        <dd>Description</dd>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item idle">
-	                        <p class="init-status"><i class="icon-time"></i> <span>Launching</span></p>
-	
-	                        <div class="hide more-info">    
-	                        	<a href="instance.html" class="view"><i class="icon-plus-sign"></i></a>  
-	                        	              
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="">Edit</a></li>
-		
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance.html">Project Name</a></dt>
-	
-	                        <dd>Description</dd>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item blue">
-	                    	<p class="init-status"><i class="icon-leaf"></i> <span> Running</span></p>
-
-	
-	                        <div class="hide more-info">    
-	                        	<a href="instance.html" class="view"><i class="icon-plus-sign"></i></a>  
-	                        	              
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="">Edit</a></li>
-		
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance.html">Project Name</a></dt>
-	
-	                        <dd>Description</dd>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item blue">
-	                    	<p class="init-status"><i class="icon-leaf"></i> <span> Running</span></p>	                        <div class="hide more-info">    
-	                        	<a href="instance.html" class="view"><i class="icon-plus-sign"></i></a>  
-	                        	              
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="">Edit</a></li>
-		
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance.html">Project Name</a></dt>
-	
-	                        <dd>Description</dd>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item blue">
-	                    	<p class="init-status"><i class="icon-leaf"></i> <span> Running</span></p>	                        <div class="hide more-info">    
-	                        	<a href="instance.html" class="view"><i class="icon-plus-sign"></i></a>  
-	                        	              
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="">Edit</a></li>
-		
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance.html">Project Name</a></dt>
-	
-	                        <dd>Description</dd>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item blue">
-	                    	<p class="init-status"><i class="icon-leaf"></i> <span> Running</span></p>	                        <div class="hide more-info">    
-	                        	<a href="instance.html" class="view"><i class="icon-plus-sign"></i></a>  
-	                        	              
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="">Edit</a></li>
-		
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance.html">Project Name</a></dt>
-	
-	                        <dd>Description</dd>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item blue">
-	                    	<p class="init-status"><i class="icon-leaf"></i> <span> Running</span></p>	                        <div class="hide more-info">    
-	                        	<a href="instance.html" class="view"><i class="icon-plus-sign"></i></a>  
-	                        	              
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="">Edit</a></li>
-		
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance.html">Project Name</a></dt>
-	
-	                        <dd>Description</dd>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item blue">
-	                    	<p class="init-status"><i class="icon-leaf"></i> <span> Running</span></p>	                        <div class="hide more-info">    
-	                        	<a href="instance.html" class="view"><i class="icon-plus-sign"></i></a>  
-	                        	              
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="">Edit</a></li>
-		
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance.html">Project Name</a></dt>
-	
-	                        <dd>Description</dd>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item blue">
-	                    	<p class="init-status"><i class="icon-leaf"></i> <span> Running</span></p>	                        <div class="hide more-info">    
-	                        	<a href="instance.html" class="view"><i class="icon-plus-sign"></i></a>  
-	                        	              
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="">Edit</a></li>
-		
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance.html">Project Name</a></dt>
-	
-	                        <dd>Description</dd>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item blue">
-	                    	<p class="init-status"><i class="icon-leaf"></i> <span> Running</span></p>	                        <div class="hide more-info">    
-	                        	<a href="instance.html" class="view"><i class="icon-plus-sign"></i></a>  
-	                        	              
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="">Edit</a></li>
-		
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance.html">Project Name</a></dt>
-	
-	                        <dd>Description</dd>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item blue">
-	                    	<p class="init-status"><i class="icon-leaf"></i> <span> Running</span></p>	                        <div class="hide more-info">    
-	                        	<a href="instance.html" class="view"><i class="icon-plus-sign"></i></a>  
-	                        	              
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="">Edit</a></li>
-		
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance.html">Project Name</a></dt>
-	
-	                        <dd>Description</dd>
-	                    </dl>
-	                </div>
-	
-	                <div class="span2 list-wrap">
-	                    <div class="list-item blue">
-	                    	<p class="init-status"><i class="icon-leaf"></i> <span> Running</span></p>	                        <div class="hide more-info">    
-	                        	<a href="instance.html" class="view"><i class="icon-plus-sign"></i></a>  
-	                        	              
-		                        <div class="dropdown">
-		                            <button class="dropdown-toggle btn" data-toggle="dropdown"><i class="icon-cog"></i><i class="icon-caret-down"></i> </button>
-		
-		                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-		                                <li><a href="">Edit</a></li>
-		
-		                                <li><a href="">Delete</a></li>
-		                            </ul>
-		                        </div>
-		                        
-	                        </div>
-	                    </div>
-	
-	                    <dl>
-	                        <dt><a href="instance.html">Project Name</a></dt>
-	
-	                        <dd>Description</dd>
-	                    </dl>
 	                </div>
 	            </div>
 	        </div>
@@ -423,6 +201,32 @@
 	    <div class="footer-wrap">
 		    <footer class="container" id="main">
 		    	<div class="row">
+		    		<div class="command span1" id="volume-click">
+					    <i class="icon-hdd"></i>
+					    <p><a href="" class="show-vol">Volume</a></p>
+				    </div>
+				    
+				    <div class="command span1">
+					    <i class="icon-lock"></i>
+					    <p>Sec Group</p>
+				    </div>
+				    
+				    <div class="command span1">
+					    <i class="icon-globe"></i>
+					    <p>Floating IP</p>
+				    </div>
+				    
+				    <div class="command span1">
+					    <i class="icon-camera"></i>
+					    <p>Snapshot</p>
+				    </div>
+				    
+				    <div class="command span1">
+					    <i class="icon-user"></i>
+					    <p>Collaborators</p>
+				    </div>
+				    
+				    
 			    	<div class="command span1 right">
 					    <i class="icon-trash"></i>
 					    <p>Trash</p>
@@ -447,7 +251,5 @@
 		// DO NOT EDIT BELOW THIS LINE
 		f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
 		</script>
-		<!-- End Visual Website Optimizer Asynchronous Code -->
-
     </body>
 </html>
