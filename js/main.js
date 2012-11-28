@@ -15,19 +15,51 @@ $(document).ready(function(){
 	$('#instance-new').click(function(){
     	window.location = 'instance-new.html';
 	});
-	
+
 	$('#cancel').click(function(){
     	$('.new-modal').fadeOut('fast');
     	console.log('close');
 	});
-	
+
 /*
 	$('#create').click(function(){
 		$('#proj-create').fadeOut('fast');
     	$('.notice-wrap').slideDown('fast').delay(3000).slideUp('fast');
 	});
 */
+<<<<<<< HEAD
+
+	$('#vol-create').click(function(){
+		$('.new-modal').fadeOut('fast');
+	});
+
+	$('footer .show-vol').click(function(){
+		$('#volume-list').toggle();
+		return false
+	})
+
+	$('.dropdown-menu .show-vol').click(function(){
+		$('#volume-list').toggle();
+		return false
+	})
+
+	$('header .show-vol').click(function(){
+		$('#volume-list').toggle();
+		return false
+	})
+
+	$('.attachment .show-vol').click(function(){
+		$('#volume-list-attached').toggle();
+		return false
+	})
+
+	$('.show-new-vol').click(function(){
+		$('#new-volume').toggle();
+		return false
+	})
+=======
 	
+>>>>>>> dbe6193435ae69a4ae51c5fda9f11a9ae9625014
 
   /* Crude JS for Image Type Control */
   $('#edit-image-type').click(function(event) {
@@ -188,7 +220,44 @@ $(document).ready(function(){
     $('#keypair-value').text("Keypair 1");
   })
 
+  /* Crude JS Password Control */
+  $('#set-password').click(function(event) {
+    event.preventDefault();
+    $('#password-input').removeClass('is-hidden');
+    $('#save-password').removeClass('is-hidden');
+    $('#cancel-password').removeClass('is-hidden');
+    $('#set-password').addClass('is-hidden');
+    $('#password-value').addClass('is-hidden');
+  })
 
+  $('#save-password').click(function(event) {
+    event.preventDefault();
+    var password = document.getElementById('password-input').value;
+    $('#password-input').addClass('is-hidden');
+    $('#save-password').addClass('is-hidden');
+    $('#cancel-password').addClass('is-hidden');
+    $('#set-password').removeClass('is-hidden');
+    $('#password-value').removeClass('is-hidden');
+    $('#password-value').text(password);
+  })
+
+  $('#cancel-password').click(function(event) {
+    event.preventDefault();
+    $('#password-input').addClass('is-hidden');
+    $('#save-password').addClass('is-hidden');
+    $('#cancel-password').addClass('is-hidden');
+    $('#set-password').removeClass('is-hidden');
+    $('#password-value').removeClass('is-hidden');
+  })
+
+  $('#flavor-group').hover(
+    function(event) {
+    $('#flavor-details').removeClass('is-hidden');
+    },
+    function(event) {
+    $('#flavor-details').addClass('is-hidden');
+    }
+  )
 });
 
 $(document).mouseup(function (e)
