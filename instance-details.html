@@ -40,7 +40,7 @@
 	        </header>
 	    </div>
 	    
-	    <div class="notice-wrap clearfix red">
+	    <div class="notice-wrap clearfix red hide">
 	    	<div id="notice" class="container">
 	    		<div class="row">
 		    		<p class="span12"><i class="icon-warning-sign"></i> <strong>Instance 1</strong> has stopped running!</p>		    	
@@ -55,7 +55,7 @@
 	            </header>
 	
 	            <ul class="span2" id="vm-tab">
-	                <li class="active"><a href="#info" data-toggle="tab">Info</a></li>
+	                <li class="active"><a href="#info" data-toggle="tab">General</a></li>
 	                
 	                <li><a href="#monitor" data-toggle="tab">Monitor</a></li>
 	            </ul>
@@ -64,6 +64,8 @@
 	                <div class="tab-pane active" id="info">
 	                    <div class="row">
 	                        <div class="span6">
+	                        	<h3>Details</h3>
+	                        	
 	                            <dl>
 	                                <dt>ID</dt>
 	
@@ -132,24 +134,26 @@
 	                        </div>
 	
 	                        <div class="span4" id="diagram">
-	                        	<p><i class="icon-cloud"></i> <span>Internet</span></p>
-	                        	<p><i class="icon-lock"></i> <span>Security Group</span></p>
-	                        	<p><i class="icon-sign-blank"></i> <span>Instance 1</span></p>
-	                        	<p><i class="icon-hdd"></i> <span>Volume 1</span></p>
+	                        	<h3 style="text-align: left">Instance Diagram</h3>
+	                        	
+	                        	<p><i class="icon-cloud"></i> <span>Internet (10.0.0.99)</span></p>
+	                        	<p><i class="icon-lock"></i> <span>Security Group (192.168.0.1)</span></p>
+	                        	<p><i class="icon-sign-blank"></i> <span>Instance 1 (Ubuntu)</span></p>
+	                        	<p><i class="icon-hdd"></i> <span>Volume 1 (10 GB)</span></p>
 	                       
 	                        </div>
 	                    </div>
 	                </div>
 	
 	                <div class="tab-pane" id="monitor">
-	                    <h3>CPU Time</h3>
-					    <p><img src="img/graph.png" alt="graph"></p>
+	                   <div class="row"> <div class="span3"><h3>CPU Time</h3>
+					    <p><img src="img/graph.png" alt="graph"></p></div>
 					    
-					    <h3>Network</h3>
-					    <p><img src="img/graph.png" alt="graph"></p>
+					    <div class="span3"><h3>Network</h3>
+					    <p><img src="img/graph.png" alt="graph"></p></div>
 					    
-					    <h3>Block I/O</h3>
-					    <p><img src="img/graph.png" alt="graph"></p>
+					    <div class="span3"><h3>Block I/O</h3>
+					    <p><img src="img/graph.png" alt="graph"></p></div></div>
 	            </div>
 	        </div>
 	    </div>
