@@ -7,6 +7,10 @@ $(document).ready(function(){
 	$('#projects-new').click(function(){
     	window.location = 'projects-new.html';
 	});
+	
+	$('#volume-click').click(function(){
+    	window.location = 'volume.html';
+	});
 
 	$('#instance-new').click(function(){
     	window.location = 'instance-new.html';
@@ -14,6 +18,7 @@ $(document).ready(function(){
 
 	$('#cancel').click(function(){
     	$('.new-modal').fadeOut('fast');
+    	console.log('close');
 	});
 
 /*
@@ -22,6 +27,7 @@ $(document).ready(function(){
     	$('.notice-wrap').slideDown('fast').delay(3000).slideUp('fast');
 	});
 */
+<<<<<<< HEAD
 
 	$('#vol-create').click(function(){
 		$('.new-modal').fadeOut('fast');
@@ -51,6 +57,9 @@ $(document).ready(function(){
 		$('#new-volume').toggle();
 		return false
 	})
+=======
+	
+>>>>>>> dbe6193435ae69a4ae51c5fda9f11a9ae9625014
 
   /* Crude JS for Image Type Control */
   $('#edit-image-type').click(function(event) {
