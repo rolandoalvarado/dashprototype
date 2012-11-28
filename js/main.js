@@ -7,6 +7,10 @@ $(document).ready(function(){
 	$('#projects-new').click(function(){
     	window.location = 'projects-new.html';
 	});
+	
+	$('#volume-click').click(function(){
+    	window.location = 'volume.html';
+	});
 
 	$('#instance-new').click(function(){
     	window.location = 'instance-new.html';
@@ -14,6 +18,7 @@ $(document).ready(function(){
 	
 	$('#cancel').click(function(){
     	$('.new-modal').fadeOut('fast');
+    	console.log('close');
 	});
 	
 /*
@@ -23,34 +28,6 @@ $(document).ready(function(){
 	});
 */
 	
-	$('#vol-create').click(function(){
-		$('.new-modal').fadeOut('fast');
-	});
-	
-	$('footer .show-vol').click(function(){
-		$('#volume-list').toggle();
-		return false
-	})
-	
-	$('.dropdown-menu .show-vol').click(function(){
-		$('#volume-list').toggle();
-		return false
-	})
-	
-	$('header .show-vol').click(function(){
-		$('#volume-list').toggle();
-		return false
-	})
-	
-	$('.attachment .show-vol').click(function(){
-		$('#volume-list-attached').toggle();
-		return false
-	})
-	
-	$('.show-new-vol').click(function(){
-		$('#new-volume').toggle();
-		return false
-	})
 
   /* Crude JS for Image Type Control */
   $('#edit-image-type').click(function(event) {
