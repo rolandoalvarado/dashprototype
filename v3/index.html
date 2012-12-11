@@ -244,7 +244,7 @@
         }
 
         #instance-info-wrap {
-            width: 56%;
+            width: 54.8%;
             height: 900px;
         }
 
@@ -253,9 +253,15 @@
     @media only screen
     and (min-width : 320px)
     and (max-width : 767px) {
+    	#project-wrap {
+	    	overflow: auto;
+            height: 110px;
+    	}
+    	
         #instance-wrap {
             overflow: auto;
             height: 180px;
+            border-bottom: 1px solid #EEE;
         }
 
         .vm-item {
@@ -264,9 +270,15 @@
 	        height: 50px;
 	        text-align: left;
         }
+        
 
         .vm-item dl {
+        	margin: -12px 0 0 0;
 	        float: left;
+        }
+        
+        .vm-item dt {
+	        margin-bottom: 3px
         }
 
         .vm-item img {
@@ -274,6 +286,15 @@
         	margin-right: 20px;
         	width: 10%;
         }
+        
+        .vm-item.active {
+		   	border: none;
+		   	background-color: #eee;
+	    }
+	    
+	    .vm-item .attachment {
+		    float: left;
+	    }
     }
 
     #instance-info-wrap h3 {
@@ -325,6 +346,12 @@
 
     .a-project:hover{
       cursor: pointer;
+    }
+    
+    #instance-header {
+	    float: left;
+	    margin-bottom: 18px;
+	    width: 100%;
     }
     </style>
   <script src="js/vendor/jquery-1.8.2.min.js"></script>
@@ -428,192 +455,237 @@
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
             
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
+            
         </div>
 
         <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
-            
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
-            
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
-            
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
-            
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
-            
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
-            
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
-            
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
-            
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
-            
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
-            
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
-            
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
-            
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
-                <dt>Instance</dt>
+                <dt>Instance Name</dt>
+                
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+					</ul>
+				</dd>
             </dl>
-            
-            <ul class="attachment">
-				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-				<li><a href=""><i class="icon-lock"></i> 23</a></li>
-				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
     </div>
 
     <div id="instance-info-wrap">
-        <h3>Instance Name</h3>
+    	<div class="clearfix left" id="instance-header">
+	        <h3>Instance Name</h3>
+	
+	        <p class="id">ID: 6b86ec6a-2b5c-4d7c-b572-219da8661693</p>
+        </div>
 
-        <p class="id">6b86ec6a-2b5c-4d7c-b572-219da8661693</p>
-        <p><a href="" class="btn"><i class="icon-cog"></i><i class="icon-caret-down"></i></a></p>
-
-        <ul class="nav nav-tabs" id="myTab">
+        <div class="clearfix"><ul class="nav nav-tabs" id="myTab">
             <li class="active"><a href="#details">Details</a></li>
 
             <li><a href="#monitor">Monitor</a></li>
@@ -621,10 +693,6 @@
 
         <div class="tab-content">
             <div class="tab-pane active" id="details">
-                <div class="btn-group">
-                    <a href="" class="btn"><i class="icon-list"></i></a> <a href="" class="btn"><i class="icon-th"></i></a>
-                </div>
-
                 <dl>
                     <dt>Image Name</dt>
 
@@ -685,11 +753,7 @@
                     <dd>no volumes attached</dd>
                 </dl>
             </div>
-        </div>
-
-        <div class="tab-pane" id="monitor">
-
-        </div>
+        </div></div>
     </div>
 
     <div class="hide" id="notice-detail">
