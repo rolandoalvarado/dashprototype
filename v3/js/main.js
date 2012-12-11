@@ -46,4 +46,11 @@ $(document).ready(function(){
      })
   })
 
+  $('.a-project').click(function(e) {
+    e.preventDefault()
+    $("#instance-info-wrap").show();
+    $("#instance-wrap").css('width', '20%');
+    $(".vm-item").show();
+  })
+
 });
