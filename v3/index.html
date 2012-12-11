@@ -164,22 +164,42 @@
 
     .vm-item {
         margin: 18px auto;
-        padding: 18px 10px;
+        padding: 12px 10px;
         width: 110px;
-        height: 110px;
         border-bottom: 1px solid #EEE;
         border-radius: 3px;
         background-color: #fff;
-        box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
         text-align: center;
+        box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
     }
-
+    
+    .vm-item dl {
+	    margin-bottom: 6px;
+    }
+    
+    .attachment {
+	    margin-left: 0;
+    }
+    
+    .attachment li {
+	    display: inline-block;
+	    list-style: none;
+    }
+    
+    .attachment li a {
+    	font-size: 10px;
+	    background-color: #444;
+	    color: #FEFEFE;
+	    padding: 2px 3px;
+	    border-radius: 3px;
+    }
+    
     .vm-item dd {
         margin-left: 0;
     }
 
     .vm-item.active {
-	   	background-color: #F1F1F1;
+	   	border: 3px solid rgba(0,0,0,0.3)
     }
 
     .vm-item img {
@@ -197,6 +217,15 @@
     #instance-wrap,
     #instance-info-wrap {
 	    overflow: auto;
+    }
+    
+    #project-wrap input {
+	    width: 100%;
+	    margin-bottom: 0;
+    }
+    
+    #project-wrap form {
+	    margin: 0
     }
 
      /* iPads (portrait) ----------- */
@@ -322,10 +351,6 @@
 
 <body>
 
-    <div id="new-instance-modal" class="modal hide fade">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-
     <header>
         <div class="clearfix visible-phone">
             <h1 class="left">Projects</h1>
@@ -397,16 +422,19 @@
     </div>
 
     <div id="instance-wrap" class="clearfix">
-    	<div id="new-instance"><a href=""><i class="icon-plus"></i>New</a></div>
+    	<div id="new-instance"><a href=""><i class="icon-plus"></i>New Instance</a></div>
 
         <div class="vm-item active">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
@@ -414,9 +442,12 @@
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
@@ -424,9 +455,12 @@
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
@@ -434,9 +468,12 @@
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
@@ -444,9 +481,12 @@
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
@@ -454,9 +494,12 @@
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
@@ -464,9 +507,12 @@
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
@@ -474,9 +520,12 @@
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
@@ -484,9 +533,12 @@
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
@@ -494,9 +546,12 @@
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
@@ -504,9 +559,12 @@
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
@@ -514,9 +572,12 @@
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
@@ -524,9 +585,12 @@
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
 
         <div class="vm-item">
@@ -534,9 +598,12 @@
 
             <dl>
                 <dt>Instance</dt>
-
-                <dd>11.0.01.0</dd>
             </dl>
+            
+            <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>		                        			</ul>
         </div>
     </div>
 
