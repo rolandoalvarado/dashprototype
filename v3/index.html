@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
- 
+
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
     <style type="text/css" media="screen">
 	body {
@@ -21,7 +21,7 @@
         padding: 0 0 54px 0;
         background-color: #edeae5;
         color: #777;
-        font-family: 'Open Sans', sans-serif; 
+        font-family: 'Open Sans', sans-serif;
     }
 
     .container-fluid {
@@ -177,7 +177,7 @@
     .vm-item dd {
         margin-left: 0;
     }
-    
+
     .vm-item.active {
 	   	background-color: #F1F1F1;
     }
@@ -191,8 +191,8 @@
         padding: 12px 20px;
         width: 100%;
         background-color: #fff;
-    } 
-    
+    }
+
     #project-wrap,
     #instance-wrap,
     #instance-info-wrap {
@@ -200,7 +200,7 @@
     }
 
      /* iPads (portrait) ----------- */
-    @media only screen 
+    @media only screen
     and (min-width : 768px) {
         #project-wrap {
             float: left;
@@ -208,79 +208,79 @@
             height: 900px;
             background-color: #fff;
         }
-        
+
         #instance-wrap {
             float: left;
             width: 20%;
         }
-        
+
         #instance-info-wrap {
             width: 56%;
             height: 900px;
-        } 
-        
+        }
+
     }
 
-    @media only screen 
-    and (min-width : 320px) 
+    @media only screen
+    and (min-width : 320px)
     and (max-width : 767px) {
         #instance-wrap {
             overflow: auto;
             height: 180px;
         }
-        
+
         .vm-item {
 	        margin: 0;
 	        width: 100%;
 	        height: 50px;
 	        text-align: left;
         }
-        
+
         .vm-item dl {
 	        float: left;
         }
-        
+
         .vm-item img {
 	        float: left;
         	margin-right: 20px;
         	width: 10%;
         }
     }
-    
+
     #instance-info-wrap h3 {
-		font-weight: normal;    
+		font-weight: normal;
     }
-    
+
     #details dl {
 	    margin-bottom: 0;
 	    padding-bottom: 6px;
     }
-    
+
     #details dd,
     #details dt {
 	    display: inline-block;
 	    margin-left: 0;
     }
 
-    
+
     #details dt{
     	width: 50%;
     }
-    
+
     #user-info {
 	    margin-top: 8px;
 	    margin-right: 20px;
 	    font-size: 18px;
     }
-    
+
     #new-proj {
 	    background-color: #f9f9f9;
     }
-    
+
     #new-instance {
 	    background-color: rgba(0,0,0,0.05);
     }
-    
+
     #new-proj a,
     #new-instance a {
     	display: block;
@@ -289,17 +289,39 @@
 	    color: rgba(0,0,0,0.5);
 	    text-transform: uppercase;
     }
-   
 
+    .is-hidden {
+      display: none !important;
+    }
     </style>
+  <script src="js/vendor/jquery-1.8.2.min.js"></script>
+  <script src="js/vendor/jquery.tmpl.min.js"></script>
+  <script type="text/x-jquery-tmpl" id="project-item-template">
+    <div class="project-item clearfix">
+      <form>
+        <fieldset>
+          <dl class="left">
+            <dt>
+              <span class="is-hidden" id="project-text"></span>
+              <input type="text" placeholder="Unnamed project" id="project-input"></input>
+            </dt>
+            <dd>
+              <span id="description">add a description&hellip;</span>
+              <input type="text" placeholder="add a description..." id="description-box" class="is-hidden"></input>
+            </dd>
+          </dl>
+        </fieldset>
+      </form>
+    </div>
+  </script>
 </head>
 
 <body>
-    
+
     <div id="new-instance-modal" class="modal hide fade">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
-    
+
     <header>
         <div class="clearfix visible-phone">
             <h1 class="left">Projects</h1>
@@ -311,7 +333,7 @@
             <div class="hidden-phone left">
                 <a href="" class="active">Projects</a> <a href="">Images</a> <a href="">Users</a> <a href="">Billing</a> <a href="">Resources</a> <a href="">Support</a>
             </div>
-            
+
             <div class="hidden-phone right" id="user-info">
                 Good Morning Captain <strong>Nield</strong>!
             </div>
@@ -338,7 +360,7 @@
 
     <div id="project-wrap">
     	 <div id="new-proj"><a href=""><i class="icon-plus"></i> New Project</a></div>
-    	 
+
         <div class="project-item clearfix">
             <dl class="left">
                 <dt>Unnamed project 3</dt>
@@ -349,7 +371,7 @@
             <p class="right"><a href=""><i class="icon-chevron-down"></i></a></p>
         </div>
 
-        <div class="project-item clearfix hidden-phone">
+        <div class="project-item clearfix">
             <dl class="left">
                 <dt>Unnamed project 2</dt>
 
@@ -359,7 +381,7 @@
             <p class="right"><a href=""><i class="icon-chevron-down"></i></a></p>
         </div>
 
-        <div class="project-item clearfix hidden-phone">
+        <div class="project-item clearfix">
             <dl class="left">
                 <dt>Unnamed project 1</dt>
 
@@ -372,8 +394,68 @@
 
     <div id="instance-wrap" class="clearfix">
     	<div id="new-instance"><a href=""><i class="icon-plus"></i>New</a></div>
-    	
+
         <div class="vm-item active">
+            <p><img src="img/vm.png" alt="vm"></p>
+
+            <dl>
+                <dt>Instance</dt>
+
+                <dd>11.0.01.0</dd>
+            </dl>
+        </div>
+
+        <div class="vm-item">
+            <p><img src="img/vm.png" alt="vm"></p>
+
+            <dl>
+                <dt>Instance</dt>
+
+                <dd>11.0.01.0</dd>
+            </dl>
+        </div>
+
+        <div class="vm-item">
+            <p><img src="img/vm.png" alt="vm"></p>
+
+            <dl>
+                <dt>Instance</dt>
+
+                <dd>11.0.01.0</dd>
+            </dl>
+        </div>
+
+        <div class="vm-item">
+            <p><img src="img/vm.png" alt="vm"></p>
+
+            <dl>
+                <dt>Instance</dt>
+
+                <dd>11.0.01.0</dd>
+            </dl>
+        </div>
+
+        <div class="vm-item">
+            <p><img src="img/vm.png" alt="vm"></p>
+
+            <dl>
+                <dt>Instance</dt>
+
+                <dd>11.0.01.0</dd>
+            </dl>
+        </div>
+
+        <div class="vm-item">
+            <p><img src="img/vm.png" alt="vm"></p>
+
+            <dl>
+                <dt>Instance</dt>
+
+                <dd>11.0.01.0</dd>
+            </dl>
+        </div>
+
+        <div class="vm-item">
             <p><img src="img/vm.png" alt="vm"></p>
 
             <dl>
@@ -456,10 +538,10 @@
 
     <div id="instance-info-wrap">
         <h3>Instance Name</h3>
-        
+
         <p class="id">6b86ec6a-2b5c-4d7c-b572-219da8661693</p>
         <p><a href="" class="btn"><i class="icon-cog"></i><i class="icon-caret-down"></i></a></p>
-        
+
         <ul class="nav nav-tabs" id="myTab">
             <li class="active"><a href="#details">Details</a></li>
 
@@ -471,7 +553,7 @@
                 <div class="btn-group">
                     <a href="" class="btn"><i class="icon-list"></i></a> <a href="" class="btn"><i class="icon-th"></i></a>
                 </div>
-                
+
                 <dl>
                     <dt>Image Name</dt>
 
@@ -525,7 +607,7 @@
 
                     <dd>-</dd>
                 </dl>
-                
+
                 <dl>
                     <dt>Volumes</dt>
 
@@ -535,7 +617,7 @@
         </div>
 
         <div class="tab-pane" id="monitor">
-            
+
         </div>
     </div>
 
@@ -548,22 +630,21 @@
     <div id="notice">
         <a href=""><i class="icon-warning-sign"></i>3</a> <a href=""><i class="icon-exclamation-sign"></i>1</a> <a href=""><i class="icon-ok-sign"></i>1</a>
     </div>
-    
-    <script src="js/vendor/jquery-1.8.2.min.js"></script>
-    </script><script src="js/vendor/bootstrap.min.js" type="text/javascript">
-</script><script src="js/main.js" type="text/javascript">
-</script><script type="text/javascript">
+
+  <script src="js/vendor/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+  <script type="text/javascript">
 	var windowHeight = $(window).outerHeight();
 	var noticeHeight = $('#notice').outerHeight();
-	
+
 	$('#phone-nav-icon').click(function(){
-        
+
         if ( $('#main-nav').hasClass('hide') && $('#main-nav').hasClass('hide') ){
             $('#main-nav').slideDown().removeClass('hide').addClass('visible');
         } else {
             $('#main-nav').slideUp().addClass('hide').removeClass('visible');
-        } 
-            
+        }
+
         return false;
     });
 
@@ -571,14 +652,15 @@
         if ( $('#notice-detail').hasClass('hide') ) {
             $('#notice-detail').slideUp().removeClass('hide');
             return false;
-            
+
         } else {
             $('#notice-detail').slideDown().addClass('hide');
             return false;
-        
+
         }
-        
+
     });
-    </script>
+
+  </script>
 </body>
 </html>
