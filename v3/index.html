@@ -353,9 +353,37 @@
 	    margin-bottom: 18px;
 	    width: 100%;
     }
+    
+    #instance-create .controls p {
+	    position: relative;
+	    top: 8px;
+    }
+    
+    .control-group {
+	    margin-bottom: 3px;
+    }
+    	#instance-create header {
+	    	background-color: transparent;
+    	}
 
     	#instance-create {
     		top: 270px
+    	}
+    	
+    	#instance-create .sub-choice {
+	    	background-color: #fafafa;
+    	}
+    	
+    	#instance-create #image-type-items select,
+    	#keypair-options select {
+    		width: 100%;
+	    	height: 300px;
+	    	border: none;
+	    	box-shadow: none;
+    	}
+    	
+    	.sub-command {
+	    	color: #ccc;
     	}
 
     	#instance-create {
@@ -363,8 +391,10 @@
     	  left:50%;
     	  top:50%;
     	  margin-left:-440px;
-    	  margin-top:-197px;
+    	  margin-top:-230px;
     	  width:800px;
+    	  height: 460px;
+    	  overflow: auto;
     	  padding:32px 40px 18px;
     	  z-index:2;
     	  background-color:#fff;
@@ -520,7 +550,7 @@
         </nav>
     </header>
 
-    <div id="instance-create" class="container new-modal is-hidden">
+    <div id="instance-create" class="container new-modal">
       <div class="row-fluid">
         <div class="span12">
               <header><input type="text" placeholder="Instance Name" id="proj-name"></header>
