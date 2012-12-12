@@ -172,20 +172,20 @@
         text-align: center;
         box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
     }
-    
+
     .vm-item dl {
 	    margin-bottom: 6px;
     }
-    
+
     .attachment {
 	    margin-left: 0;
     }
-    
+
     .attachment li {
 	    display: inline-block;
 	    list-style: none;
     }
-    
+
     .attachment li a {
     	font-size: 10px;
 	    background-color: #444;
@@ -193,7 +193,7 @@
 	    padding: 2px 3px;
 	    border-radius: 3px;
     }
-    
+
     .vm-item dd {
         margin-left: 0;
     }
@@ -218,12 +218,12 @@
     #instance-info-wrap {
 	    overflow: auto;
     }
-    
+
     #project-wrap input {
 	    width: 100%;
 	    margin-bottom: 0;
     }
-    
+
     #project-wrap form {
 	    margin: 0
     }
@@ -257,7 +257,7 @@
 	    	overflow: auto;
             height: 110px;
     	}
-    	
+
         #instance-wrap {
             overflow: auto;
             height: 180px;
@@ -270,13 +270,13 @@
 	        height: 50px;
 	        text-align: left;
         }
-        
+
 
         .vm-item dl {
         	margin: -12px 0 0 0;
 	        float: left;
         }
-        
+
         .vm-item dt {
 	        margin-bottom: 3px
         }
@@ -286,12 +286,12 @@
         	margin-right: 20px;
         	width: 10%;
         }
-        
+
         .vm-item.active {
 		   	border: none;
 		   	background-color: #eee;
 	    }
-	    
+
 	    .vm-item .attachment {
 		    float: left;
 	    }
@@ -347,12 +347,61 @@
     .a-project:hover{
       cursor: pointer;
     }
-    
+
     #instance-header {
 	    float: left;
 	    margin-bottom: 18px;
 	    width: 100%;
     }
+
+    	#instance-create {
+    		top: 270px
+    	}
+
+    	#instance-create {
+    	  position:fixed;
+    	  left:50%;
+    	  top:50%;
+    	  margin-left:-440px;
+    	  margin-top:-197px;
+    	  width:800px;
+    	  padding:32px 40px 18px;
+    	  z-index:2;
+    	  background-color:#fff;
+    	  box-shadow:0 0 5px rgba(0,0,0,0.2);
+    	  border-top:1px solid #f2f2f2
+    	}
+      #instance-create td,#instance-create th {
+        padding-left:0;
+      }
+      #instance-create th {
+        font-weight:normal;
+        color:#626c7c;
+      }
+      #instance-create input[id=proj-name] {
+        width:98%;
+      }
+
+    	select[multiple=multiple] {
+      	height: 380px;
+      	box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
+      	width: 400px;
+    	}
+
+      .is-hidden {
+        display: none;
+      }
+
+      #flavor-details {
+      	background-color: #fff;
+      	border: 1px solid #CCC;
+      	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        position: absolute;
+        right: -20px;
+        top: 60px;
+        width: 150px;
+        padding: 10px
+      }
     </style>
   <script src="js/vendor/jquery-1.8.2.min.js"></script>
   <script src="js/vendor/jquery.tmpl.min.js"></script>
@@ -373,6 +422,63 @@
         </fieldset>
       </form>
     </div>
+  </script>
+  <script type="text/x-jquery-tmpl" id="instance-item-template">
+    <div class="vm-item">
+        <p><img src="img/vm.png" alt="vm"></p>
+
+        <dl>
+            <dt>Created Instance</dt>
+
+            <dd>
+              <ul class="attachment">
+				<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+				<li><a href=""><i class="icon-lock"></i> 23</a></li>
+				<li><a href=""><i class="icon-globe"></i> 300</a></li>
+			</ul>
+		</dd>
+        </dl>
+
+
+    </div>
+  </script>
+  <script>
+    function updateCopy(value) {
+      $('#copy-value').text(value);
+    }
+
+    function updateFlavor(value) {
+      var flavor, vcpu, ram, disk;
+      if(value == "medium") {
+        flavor = "Medium";
+        vcpu = "2 vCPUs";
+        ram = "4096 MB";
+        disk = "20 GB";
+      }
+      else if(value == "large") {
+        flavor = "Large";
+        vcpu = "4 vCPUs";
+        ram = "8102 MB";
+        disk = "30 GB";
+      }
+      else if(value == "xlarge") {
+        flavor = "Extra Large";
+        vcpu = "8 vCPU";
+        ram = "16384 MB";
+        disk = "40 GB";
+      }
+      else {
+        flavor = "Small";
+        vcpu = "1 vCPU";
+        ram = "2048 MB";
+        disk = "10 GB";
+      }
+
+      $('#flavor-value').text(flavor);
+      $('#vcpu-value').text(vcpu);
+      $('#ram-value').text(ram);
+      $('#disk-value').text(disk);
+    }
   </script>
 </head>
 
@@ -413,6 +519,180 @@
             </ul>
         </nav>
     </header>
+
+    <div id="instance-create" class="container new-modal is-hidden">
+      <div class="row-fluid">
+        <div class="span12">
+              <header><input type="text" placeholder="Instance Name" id="proj-name"></header>
+
+              <form class="form-horizontal clearfix">
+              	<div class="control-group">
+				    <label class="control-label" for="inputEmail">Image Type</label>
+
+				    <div class="controls">
+				    	<p>
+				    	  <span id="image-type-value">Default Image 1</span>
+				    	   <a href="#" class="sub-command" id="edit-image-type" style="margin-left: 10px">Edit</a>
+				    	  <a href="#" class="is-hidden" style="margin-left: 10px; font-size: 11px" id="save-image-type">Save</a>
+				    	  <a href="#" class="is-hidden" style="margin-left: 5px; color: #ccc; font-size: 11px" id="cancel-image-type">Cancel</a>
+				    	</p>
+				    </div>
+				</div>
+
+				<div id="image-type-items" class="sub-choice is-hidden">
+					<select multiple="multiple">
+					  <option selected="yes" id="item-1">Default Image 1</option>
+					  <option id="item-2">Image 2</option>
+					  <option id="item-3">Image 3</option>
+					  <option id="item-4">Image 4</option>
+					  <option id="item-5">Image 5</option>
+					</select>
+				</div>
+
+				<div class="control-group">
+				    <label class="control-label" for="inputEmail">Flavor</label>
+
+				    <div class="controls">
+				    	<p>
+				    	  <span id="flavor-value">Small</span>
+				    	  <select id="flavor-select" class="is-hidden" onchange="updateFlavor(this.value);">
+                  <option value ="small" selected>Small</option>
+                  <option value ="medium">Medium</option>
+                  <option value ="large">Large</option>
+                  <option value ="xlarge">Extra Large</option>
+                </select>
+
+                				 <a href="#" class="sub-command" id="edit-flavor2" style="margin-left: 10px">Edit</a>
+				    	  <a href="#" class="is-hidden" style="margin-left: 10px; font-size: 11px" id="save-flavor2">Save</a>
+				    	  <a href="#" class="is-hidden" style="margin-left: 5px; color: #ccc; font-size: 11px" id="cancel-flavor2">Cancel</a>
+
+				    	</p>
+				    </div>
+				</div>
+
+				<div id="flavor-options2" class="sub-choice is-hidden">
+					<div class="control-group">
+					    <label class="control-label" for="vCPU">vCPU</label>
+
+					    <div class="controls">
+					    	<p>
+					    	  <span id="vcpu-value">1 vCPU</span>
+					    	</p>
+					    </div>
+					</div>
+
+					<div class="control-group">
+					    <label class="control-label" for="RAM">RAM</label>
+
+					    <div class="controls">
+					    	<p>
+					    	  <span id="ram-value">2048 MB</span>
+					    	</p>
+					    </div>
+					</div>
+
+					<div class="control-group">
+					    <label class="control-label" for="DISK">Disk</label>
+
+					    <div class="controls">
+					    	<p>
+					    	  <span id="disk-value">10 GB</span>
+					    	</p>
+					    </div>
+					</div>
+				</div>
+
+
+				<div class="control-group">
+				    <label class="control-label" for="inputEmail">Copies</label>
+
+				    <div class="controls">
+				    	<p>
+				    	  <span id="copy-value">1</span>
+
+				    	   <a href="#" class="sub-command" id="edit-copy" style="margin-left: 10px">Edit</a>
+				    	  <a href="#" class="is-hidden" style="margin-left: 10px; font-size: 11px" id="save-copy">Save</a>
+				    	  <a href="#" class="is-hidden" style="margin-left: 5px; color: #ccc; font-size: 11px" id="cancel-copy">Cancel</a>
+
+
+				    	</p>
+				    </div>
+				</div>
+
+				<div id="copy-slider" class="sub-choice is-hidden">
+					<div class="controls">
+					  <input type="range" id="copy-slider" min="1" max="20" step="1" value="1" onchange="updateCopy(this.value);">
+          </div>
+				</div>
+
+				<div class="control-group">
+				    <label class="control-label" for="inputEmail">Keypair</label>
+
+				    <div class="controls">
+				    	<p>
+				    	  <span id="keypair-value">None</span>
+
+				    	   <a href="#" class="sub-command" id="edit-keypair" style="margin-left: 10px">Edit</a>
+				    	  <a href="#" class="is-hidden" style="margin-left: 10px; font-size: 11px" id="save-keypair">Save</a>
+				    	  <a href="#" class="is-hidden" style="margin-left: 5px; color: #ccc; font-size: 11px" id="cancel-keypair">Cancel</a>
+
+				    	</p>
+				    </div>
+				</div>
+
+				<div id="keypair-options" class="sub-choice is-hidden">
+					<select multiple="multiple">
+					  <option selected="yes" id="keypair-none">None</option>
+					  <option id="keypair-1">Keypair 1</option>
+					</select>
+				</div>
+
+				<div class="control-group">
+				    <label class="control-label" for="inputEmail">Security Group</label>
+
+				    <div class="controls">
+				    	<p> <label class="checkbox">
+					  <input type="checkbox" value="">
+					  Security Group 1
+					</label>
+
+					<label class="checkbox">
+					  <input type="checkbox" value="">
+					  Security Group 2
+					</label>
+
+					<label class="checkbox">
+					  <input type="checkbox" value="">
+					  Security Group 3
+					</label></p>
+				    </div>
+				</div>
+
+
+				<div class="control-group">
+				    <label class="control-label" for="inputEmail">Password</label>
+
+				    <div class="controls">
+				    	<input type="text" class="is-hidden" id="password-input" placeholder="Set Password" value=""/>
+				    	<p>
+				    	  <span id="password-value">Not Set</span>
+				    	   <a href="#" class="sub-command" id="set-password" style="margin-left: 0">Set Password</a>
+				    	  <a href="#" class="is-hidden" style="margin-left: 10px; font-size: 11px" id="save-password">Save</a>
+				    	  <a href="#" class="is-hidden" style="margin-left: 5px; color: #ccc; font-size: 11px" id="cancel-password">Cancel</a>
+				    	  						    	</p>
+				    </div>
+
+
+				</div>
+        </form>
+
+        <div class="right clearfix">
+          <button class="btn btn-small" type="button" id="cancel">Cancel</button>
+          <a href="" class="btn btn-primary btn-small" type="button" id="create">Create Instance</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <div id="project-wrap">
     	 <div id="new-proj"><a href=""><i class="icon-plus"></i> New Project</a></div>
@@ -456,17 +736,17 @@
 
             <dl>
                 <dt>Instance Name</dt>
-                
+
                 <dd>
 	                <ul class="attachment">
 						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
 					</ul>
 				</dd>
             </dl>
-            
-            
+
+
         </div>
 
         <div class="vm-item">
@@ -474,28 +754,12 @@
 
             <dl>
                 <dt>Instance Name</dt>
-                
+
                 <dd>
 	                <ul class="attachment">
 						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
-					</ul>
-				</dd>
-            </dl>
-        </div>
-
-        <div class="vm-item">
-            <p><img src="img/vm.png" alt="vm"></p>
-
-            <dl>
-                <dt>Instance Name</dt>
-                
-                <dd>
-	                <ul class="attachment">
-						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
-						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
 					</ul>
 				</dd>
             </dl>
@@ -506,12 +770,12 @@
 
             <dl>
                 <dt>Instance Name</dt>
-                
+
                 <dd>
 	                <ul class="attachment">
 						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
 					</ul>
 				</dd>
             </dl>
@@ -522,12 +786,12 @@
 
             <dl>
                 <dt>Instance Name</dt>
-                
+
                 <dd>
 	                <ul class="attachment">
 						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
 					</ul>
 				</dd>
             </dl>
@@ -538,12 +802,12 @@
 
             <dl>
                 <dt>Instance Name</dt>
-                
+
                 <dd>
 	                <ul class="attachment">
 						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
 					</ul>
 				</dd>
             </dl>
@@ -554,12 +818,12 @@
 
             <dl>
                 <dt>Instance Name</dt>
-                
+
                 <dd>
 	                <ul class="attachment">
 						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
 					</ul>
 				</dd>
             </dl>
@@ -570,12 +834,12 @@
 
             <dl>
                 <dt>Instance Name</dt>
-                
+
                 <dd>
 	                <ul class="attachment">
 						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
 					</ul>
 				</dd>
             </dl>
@@ -586,12 +850,12 @@
 
             <dl>
                 <dt>Instance Name</dt>
-                
+
                 <dd>
 	                <ul class="attachment">
 						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
 					</ul>
 				</dd>
             </dl>
@@ -602,12 +866,12 @@
 
             <dl>
                 <dt>Instance Name</dt>
-                
+
                 <dd>
 	                <ul class="attachment">
 						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
 					</ul>
 				</dd>
             </dl>
@@ -618,12 +882,12 @@
 
             <dl>
                 <dt>Instance Name</dt>
-                
+
                 <dd>
 	                <ul class="attachment">
 						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
 					</ul>
 				</dd>
             </dl>
@@ -634,12 +898,12 @@
 
             <dl>
                 <dt>Instance Name</dt>
-                
+
                 <dd>
 	                <ul class="attachment">
 						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
 					</ul>
 				</dd>
             </dl>
@@ -650,12 +914,12 @@
 
             <dl>
                 <dt>Instance Name</dt>
-                
+
                 <dd>
 	                <ul class="attachment">
 						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
 					</ul>
 				</dd>
             </dl>
@@ -666,12 +930,28 @@
 
             <dl>
                 <dt>Instance Name</dt>
-                
+
                 <dd>
 	                <ul class="attachment">
 						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
 						<li><a href=""><i class="icon-lock"></i> 23</a></li>
-						<li><a href=""><i class="icon-globe"></i> 300</a></li>	
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
+					</ul>
+				</dd>
+            </dl>
+        </div>
+
+        <div class="vm-item">
+            <p><img src="img/vm.png" alt="vm"></p>
+
+            <dl>
+                <dt>Instance Name</dt>
+
+                <dd>
+	                <ul class="attachment">
+						<li><a href="volume-attached.html" class="show-vol"><i class="icon-hdd"></i> 1</a></li>
+						<li><a href=""><i class="icon-lock"></i> 23</a></li>
+						<li><a href=""><i class="icon-globe"></i> 300</a></li>
 					</ul>
 				</dd>
             </dl>
@@ -681,7 +961,7 @@
     <div id="instance-info-wrap">
     	<div class="clearfix left" id="instance-header">
 	        <h3>Instance Name</h3>
-	
+
 	        <p class="id">ID: 6b86ec6a-2b5c-4d7c-b572-219da8661693</p>
         </div>
 
