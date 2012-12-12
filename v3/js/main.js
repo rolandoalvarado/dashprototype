@@ -68,6 +68,14 @@ $(document).ready(function(){
 
 	  //Render the instance item
 	  $("#instance-item-template").tmpl().insertAfter('#new-instance');
+
+	  $('.vm-created').click(function(e) {
+  	  e.preventDefault();
+
+      // Show instance panel
+      $("#instance-info-wrap").show();
+      $("#instance-wrap").css('width', '20%');
+  	})
 	})
 
   /* Crude JS for Image Type Control */
