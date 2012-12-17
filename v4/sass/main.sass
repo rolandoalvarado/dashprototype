@@ -14,21 +14,37 @@ body
 	h3 
 		margin: 0
 		font-size: 14px
+
+#instances,
+#details 
+	float: left
+	overflow: auto
 	
-#main-wrap	
-	#instances,
-	#details 
-		float: left
-		overflow: auto
+#instances
+	width: 19.9%
+	border-right: 1px solid #ccc
+	background-color: #f6f6f6
+	
+	header
+		border-bottom: 1px solid #ccc
+	dl 
+		border-bottom: 1px solid #ccc
+	dd
+		margin-left: 0
+	
+#details 
+	width: 80%
+	background-color: #FFF
 		
-	#instances
-		width: 20%
-		background-color: #f6f6f6
-	#details 
-		width: 80%
-		background-color: #FFF
+#main-wrap
 	.nav
 		background-color: #f6f6f6
+		
+		a
+			border-radius: 0
+			border-left: none
+			border-top: none
+			border-bottom:none
 		
 #footer-wrap
 	position: fixed
