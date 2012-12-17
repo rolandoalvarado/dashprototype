@@ -1,5 +1,8 @@
 body
 	font-family: 'Open Sans', sans-serif
+	
+a:hover
+	text-decoration: none
 
 .left
 	float: left
@@ -8,20 +11,25 @@ body
 	float: right
 
 #mainnav-wrap
-	padding: 9px 20px
-	font-size: 14px
+	background-color: #CF6C67
+	padding: 3px 20px
+	font-size: 11px
 	
 	a
+		color: #FFF
 		margin-right: 20px
 		
 #head-wrap 
 	background: #202020
+	border-bottom: 1px solid #ddd
 	color: #fff
-	padding: 9px 20px
+	padding: 15px 20px
 	
-	h3 
+	#proj-name
 		margin: 0
 		font-size: 14px
+		font-weight: bold
+		color: #FFF
 
 #instances,
 #details 
@@ -30,11 +38,11 @@ body
 	
 #instances
 	width: 19.9%
-	border-right: 1px solid #ccc
+	border-right: 1px solid #ddd
 	background-color: #f6f6f6
 	
 	header
-		border-bottom: 1px solid #ccc
+		border-bottom: 1px solid #ddd
 
 	dd
 		margin-left: 0
@@ -44,12 +52,16 @@ body
 		font-size: 16px
 		padding: 18px 20px
 .instance-item
-	border-bottom: 1px solid #CCC
+	border-bottom: 1px solid #ddd
 	padding: 0 20px
 	
-	.vm-img img
+	.vm-img 
 		float: left
-		width: 10%
+		width: 20px
+		height: 30px
+		margin-right: 20px
+		font-size: 28px
+		
 	
 #details 
 	width: 80%
@@ -59,14 +71,26 @@ body
 		font-size: 28px
 		font-weight: normal
 		
+	dl 
+		float: left
+	
+	dd,dt
+		display: inline-block 
+		margin-left: 0
+		
 #main-wrap
 	.nav
 		background-color: #f6f6f6
 		margin-bottom: 0
 		
 		a
+			text-align: center
+			width: 200px
 			font-size: 16px
 			padding: 18px 20px
+			
+			i
+				font-size: 18px
 			
 		li:nth-child(1) a
 			border-radius: 0
