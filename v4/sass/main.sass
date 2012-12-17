@@ -10,6 +10,15 @@ a:hover
 .right
 	float: right
 	
+.btn 
+	background-color: transparent
+	background-image: none
+	box-shadow: 0 1px 0 rgba(0,0,0,0.3)
+	text-transform: uppercase
+	font-size: 11px
+	font-weight: bold
+	letter-spacing: 2px
+	
 .dropdown-menu 
 	border-radius: 3px
 	box-shadow: 0 3px 0px rgba(0, 0, 0, 0.2)
@@ -23,7 +32,7 @@ a:hover
 	background-color: #111
 	font-size: 11px
 	padding: 0 20px
-	border-bottom: 1px solid #292929
+	border-bottom: 1px solid #2e2e2e
 	
 	.left a
 		display: block
@@ -120,11 +129,16 @@ a:hover
 		margin: 0
 		font-weight: normal
 		font-size: 16px
-		padding: 18px 20px
+		padding: 18px 20px 19px
 		
 .instance-item
+	text-shadow: 0 1px 0 rgba(255,255,255,1)
 	border-bottom: 1px solid #ddd
 	padding: 18px 0
+	
+	small
+		color: #ccc
+		font-size: 11px
 	
 	&:hover
 		background-color: #fefefe
@@ -132,7 +146,7 @@ a:hover
 	
 	.vm-img 
 		border: 1px solid #ddd
-		background-color: #EEE
+		background-color: #f3f3f3
 		border-radius: 3px
 		float: left
 		width: 40px
@@ -142,8 +156,16 @@ a:hover
 		font-size: 26px
 		
 		i
+			color: #b4b4b4
 			margin-top: 6px
 			margin-left: 8px
+	
+	.vm-img.red
+		border: 1px solid #b94948
+		background-color: #f1dede
+		
+		i
+			color: #b94948
 	dl
 		margin: 0
 		float: left
@@ -163,6 +185,9 @@ a:hover
 		border: 1px solid #ddd
 		border-radius: 100px
 		
+.instance-item.active 
+	background-color: #fff
+	
 #details 
 	width: 80%
 	background-color: #FFF
@@ -178,31 +203,55 @@ a:hover
 	.tab-pane
 		padding: 9px 40px
 		
+#instance-details 
+	.btn 
+		margin-top: 12px
+		
+		i
+			font-size: 12px
+	
+		
+		
 #main-wrap
 	.nav
 		background-color: #f6f6f6
-		margin-bottom: 0
+		margin-bottom: 0		
 		
 		a
+			text-shadow: 0 1px 0 rgba(255,255,255,0.5)
 			text-align: center
-			width: 200px
+			width: 150px
 			font-size: 16px
 			padding: 18px 20px
 			color: #CCC
+			border-top: 0
+			border-radius: 0
 			
 			&:hover
 				background-color: transparent
-				border: none
 				color: #404040
+				border-right: 1px solid #f6f6f6
+				border-left: 1px solid #f6f6f6
 			
 			.icon-list
-				font-size: 18px	
+				font-size: 21px	
+				
+		.active a
+			color: #000 
+		
+			&:hover
+				background-color: #fff
+				border-right: 1px solid #ddd
 			
 		li:nth-child(1) a
 			border-radius: 0
 			border-left: none
 			border-top: none
-			border-bottom: 2px solid #FFF
+			
+			&:hover
+				background-color: transparent
+				border-right: 1px solid #f6f6f6
+				color: #404040
 		
 #footer-wrap
 	padding: 9px 20px
