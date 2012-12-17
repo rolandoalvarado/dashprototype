@@ -37,15 +37,36 @@
 .icon-cd:before {
 	content: "\64";
 }
-.icon-graph:before {
-	content: "\65";
-}
 .icon-list:before {
 	content: "\66";
 }
-.icon-cube:before {
+.icon-statistics:before {
 	content: "\22";
 }
-.icon-cube-2:before {
+.icon-warning:before {
+	content: "\23";
+}
+.icon-new:before {
+	content: "\24";
+}
+.icon-cube:before {
+	content: "\25";
+}
+.icon-lock:before {
+	content: "\26";
+}
+.icon-network:before {
 	content: "\21";
+}
+.icon-drive:before {
+	content: "\27";
+}
+.icon-cross:before {
+	content: "\28";
+}
+.icon-cog:before {
+	content: "\29";
+}
+.icon-cross-2:before {
+	content: "\2b";
 }

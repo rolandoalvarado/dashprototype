@@ -30,34 +30,79 @@
 
     <nav class="clearfix" id="mainnav-wrap">
         <div class="left">
-            <a href="">Projects</a> <a href="">Images</a> <a href="">Users</a> <a href="">Billing</a> <a href="">Resources</a> <a href="">Support</a>
+            <a href="" class="active">Projects</a> <a href="">Images</a> <a href="">Users</a> <a href="">Billing</a> <a href="">Resources</a> <a href="">Support</a>
         </div>
 
         <div class="right">
-            hello Username
+            <div class="dropdown">
+                Good Morning Cap'n <strong>Nield</strong> <a class="dropdown-toggle" id="user-action" role="button" data-toggle="dropdown" data-target="#" href=""><i class="icon-arrow-down"></i></a>
+
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li>
+                        <a href="">Settings</a>
+                    </li>
+                    
+                    <li class="divider"></li>
+                    
+                    <li>
+                        <a href="">Logout</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <header class="clearfix" id="head-wrap">
         <div class="dropdown left">
-            <a class="dropdown-toggle" id="proj-name" role="button" data-toggle="dropdown" data-target="#" href=""><i class="icon-cd"></i> Project Name <i class="icon-arrow-down"></i></a>
+            <a class="dropdown-toggle" id="proj-name" role="button" data-toggle="dropdown" data-target="#" href=""><i class="icon-cd main"></i> Project Name <i class="icon-arrow-down"></i></a>
 
             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            
+            	<li>
+                    <a href=""><i class="icon-plus"></i>  New Project</a>
+                </li>
+            
+            	<li class="divider"></li>
+            	
                 <li>
-                    <a href="">Project Name 2</a>
+                    <a href=""><i class="icon-cd"></i>  Project Name 2</a>
                 </li>
 
                 <li>
-                    <a href="">Project Name 3</a>
+                    <a href=""><i class="icon-cd"></i>  Project Name 3</a>
                 </li>
+                
+                <li>
+                    <a href=""><i class="icon-cd"></i>  Project Name 3</a>
+                </li>
+                
+                <li>
+                    <a href=""><i class="icon-cd"></i>  Project Name 4</a>
+                </li>
+                
+                
             </ul>
         </div>
-        
+
         <div class="right">
-	        <a href="">Actions</a> 
-	        <a href="">Quotas</a>
+            <div class="dropdown left">
+	            <a class="dropdown-toggle btn" id="actions" role="button" data-toggle="dropdown" data-target="#" href=""><i class="icon-cog"></i></a>
+	
+	            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+	                <li>
+	                    <a href="">Quotas</a>
+	                </li>
+	                
+	                <li>
+	                    <a href="">Edit</a>
+	                </li>
+	                
+	                <li>
+	                    <a href="">Delete</a>
+	                </li>
+	            </ul>
+	        </div>
         </div>
-        
     </header>
 
     <div id="main-wrap">
@@ -66,33 +111,35 @@
                 <h4 class="left">Instances</h4><a href="" class="right"><i class="icon-plus"></i></a>
             </header>
 
-            <div class="instance-item">
-            	<div class="vm-img"><i class="icon-cube"></i></div>
-            	
-                <dl>
-                    <dt>Instance Name</dt>
+            <div class="instance-item clearfix">
+                <div class="vm-img"></div>
 
-                    <dd>attachments</dd>
+                <dl>
+                    <dt>Instance1-1</dt>
+
+                    <dd>
+                        <div class="attachments"></div>
+                    </dd>
                 </dl>
             </div>
 
-            <div class="instance-item">
-            	<div class="vm-img"><i class="icon-cube"></i></div>
-            	
-                <dl>
-                    <dt>Instance Name</dt>
+            <div class="instance-item clearfix">
+                <div class="vm-img"></div>
 
-                    <dd>attachments</dd>
+                <dl>
+                    <dt>InstanceName&hellip;</dt>
+
+                    <dd>
+                        <div class="attachments"></div>
+                    </dd>
                 </dl>
             </div>
 
-            <div class="instance-item">
-            	<div class="vm-img"><i class="icon-cube"></i></div>
-            	
-                <dl>
-                    <dt>Instance Name</dt>
+            <div class="instance-item clearfix">
+                <div class="vm-img"></div>
 
-                    <dd>attachments</dd>
+                <dl>
+                    <dt>Instance5</dt>
                 </dl>
             </div>
         </aside>
@@ -104,73 +151,73 @@
                 </li>
 
                 <li>
-                    <a href="#monitoring">Monitoring <i class="icon-graph"></i></a>
+                    <a href="#monitoring">Monitoring <i class="icon-statistics"></i></a>
                 </li>
             </ul>
 
             <div class="tab-content">
                 <div class="tab-pane active" id="details">
                     <h2>Overview</h2>
-                    
+
                     <dl>
-                    <dt>Image Name</dt>
+                        <dt>Image Name</dt>
 
-                    <dd>dwc-1099</dd>
-                </dl>
+                        <dd>dwc-1099</dd>
+                    </dl>
 
-                <dl>
-                    <dt>RAM</dt>
+                    <dl>
+                        <dt>RAM</dt>
 
-                    <dd>2048</dd>
-                </dl>
+                        <dd>2048</dd>
+                    </dl>
 
-                <dl>
-                    <dt>vCPUs</dt>
+                    <dl>
+                        <dt>vCPUs</dt>
 
-                    <dd>1</dd>
-                </dl>
+                        <dd>1</dd>
+                    </dl>
 
-                <dl>
-                    <dt>Disk</dt>
+                    <dl>
+                        <dt>Disk</dt>
 
-                    <dd>10</dd>
-                </dl>
+                        <dd>10</dd>
+                    </dl>
 
-                <dl>
-                    <dt>Sec Groups</dt>
+                    <dl>
+                        <dt>Sec Groups</dt>
 
-                    <dd>default</dd>
-                </dl>
+                        <dd>default</dd>
+                    </dl>
 
-                <dl>
-                    <dt>Private IP</dt>
+                    <dl>
+                        <dt>Private IP</dt>
 
-                    <dd>10.2.0.14</dd>
-                </dl>
+                        <dd>10.2.0.14</dd>
+                    </dl>
 
-                <dl>
-                    <dt>Public (internal)</dt>
+                    <dl>
+                        <dt>Public (internal)</dt>
 
-                    <dd>-</dd>
-                </dl>
+                        <dd>-</dd>
+                    </dl>
 
-                <dl>
-                    <dt>Public (external)</dt>
+                    <dl>
+                        <dt>Public (external)</dt>
 
-                    <dd>-</dd>
-                </dl>
+                        <dd>-</dd>
+                    </dl>
 
-                <dl>
-                    <dt>Keypair Name</dt>
+                    <dl>
+                        <dt>Keypair Name</dt>
 
-                    <dd>-</dd>
-                </dl>
+                        <dd>-</dd>
+                    </dl>
 
-                <dl>
-                    <dt>Volumes</dt>
+                    <dl>
+                        <dt>Volumes</dt>
 
-                    <dd>no volumes attached</dd>
-                </dl>
+                        <dd>no volumes attached</dd>
+                    </dl>
                 </div>
 
                 <div class="tab-pane" id="monitoring">
@@ -185,7 +232,8 @@
     </div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
 </script> <script>
 window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')
-    </script> <script src="js/vendor/bootstrap.min.js">
+    </script> <script src="js/icomoo-ie7.js">
+</script> <script src="js/vendor/bootstrap.min.js">
 </script> <script src="js/plugins.js">
 </script> <script src="js/main.js">
 </script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

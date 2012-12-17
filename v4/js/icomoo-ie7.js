@@ -9,9 +9,17 @@ window.onload = function() {
 			'icon-plus' : '&#x61;',
 			'icon-arrow-down' : '&#x62;',
 			'icon-cd' : '&#x64;',
-			'icon-graph' : '&#x65;',
 			'icon-list' : '&#x66;',
-			'icon-box' : '&#x21;'
+			'icon-statistics' : '&#x22;',
+			'icon-warning' : '&#x23;',
+			'icon-new' : '&#x24;',
+			'icon-cube' : '&#x25;',
+			'icon-lock' : '&#x26;',
+			'icon-network' : '&#x21;',
+			'icon-drive' : '&#x27;',
+			'icon-cross' : '&#x28;',
+			'icon-cog' : '&#x29;',
+			'icon-cross-2' : '&#x2b;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;
