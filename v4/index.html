@@ -11,10 +11,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title></title>
+    <title>Dashboard v4</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width"><!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width">    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
     <link rel="stylesheet" href="css/icomoo.css">
     <link rel="stylesheet" href="css/main.css">
@@ -206,23 +205,32 @@
         </aside>
 
         <div id="details">
-            <ul class="nav nav-tabs" id="main-tab">
-                <li class="active">
-                    <a href="#instance-details">Details <i class="icon-list"></i></a>
-                </li>
-
-                <li>
-                    <a href="#monitoring">Monitoring <i class="icon-statistics"></i></a>
-                </li>
-            </ul>
+        	<header id="tab-wrap">
+	            <ul class="nav nav-tabs" id="main-tab">
+	                <li class="active">
+	                    <a href="#instance-details">Details <i class="icon-list"></i></a>
+	                </li>
+	
+	                <li>
+	                    <a href="#monitoring">Monitoring <i class="icon-statistics"></i></a>
+	                </li>
+	            </ul>
+	            
+	            <p><a href="" class="btn right instance-action">Actions <i class="icon-cog"></i></a></p>
+            </header>
 
             <div class="tab-content">
                 <div class="tab-pane active" id="instance-details">
                 	<header class="clearfix">
-	                    <h2 class="left">Overview</h2>
+	                    <dl class="left">
+		                    <dt>Instance1-1</dt>
+		                    
+		                    <dd><span class="label">Public</span> 1.2.3.4</dd>
+		                    
+		                    <dd><span class="label">Private</span> 1.2.3.4</dd>
+	                    </dl>
 	                    
-	                    <a href="" class="btn right">Actions <i class="icon-cog"></i></a>
-                    </header>
+	                </header>
                     
                     <div class="clearfix" id="graphs-wrap">
 	                    <div class="graph-item">
@@ -313,19 +321,15 @@
 
     <div id="footer-wrap">
         Notices
-    </div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+    </div>
+    <!--[if lt IE 7]><script src="js/icomoo-ie7.js"></script><![endif]-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
 </script> <script>
 window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')
-    </script> <script src="js/icomoo-ie7.js">
-</script> <script src="js/vendor/bootstrap.min.js">
+    </script>  <script src="js/vendor/bootstrap.min.js">
 </script> <script src="js/plugins.js">
 </script> <script src="js/main.js">
-</script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-     <script>
-var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+</script> 
 </body>
 </html>
