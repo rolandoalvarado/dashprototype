@@ -20,114 +20,14 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.6.2.min.js">
 </script>
-<style type="text/css" media="screen">
-	
-</style>
+
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
-    <div id="create-instance" class="modal " tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-       	<header class="clearfix">
-        	<dl class="vm-item">
-            	<dt><img src="img/Ubuntu_120.png" alt="Ubuntu_120" width="30" height="30"></dt>
-            	
-	            <dd>Ubuntu Server LTS</dd>
-	            
-	            <dd class="os">Linux</dl>
-            </dl>
-        </header>
         
-        <div class="modal-body vm-details">
-        	<fieldset class="vm-name">
-	        	<label>Name</label>
-	        	
-	        	<input type="text" placeholder="My Instance Name"> 
-        	</fieldset>
-        	
-        	<fieldset class="vm-size">
-        		<label>Size</label>
-        		
-        		<select>
-				  <option>Small (1 core, 100 Gb Memory, 1 usd/hr)</option>
-				  <option>Medium (1 core, 100 Gb Memory, 1 usd/hr)</option>
-				  <option>Large (1 core, 100 Gb Memory, 1 usd/hr)</option>
-				</select>
-				
-	        	<label>Qty</label>
-	        	<input type="text" placeholder="1">
-        	</fieldset>
-        	
-        	<fieldset class="vm-keypair">
-	        	<label class="checkbox">
-			      <input type="checkbox" checked> <span>Keypair</span>
-			    </label>
-			    
-			    <select>
-				  <option>Keypair 1</option>
-				  <option>Keypair 2</option>
-				  <option>Keypair 3</option>
-				</select>
-        	</fieldset>
-        	
-        	<fieldset class="vm-secgroup-label">
-        		<label>Security Group</label>
-        	</fieldset>
-        	
-        	<fieldset class="vm-secgroup">	
-	        	<label class="checkbox">
-			      <input type="checkbox" checked> <span>Default</span>
-			    </label>
-			    
-			    <label class="checkbox">
-			      <input type="checkbox"> <span>Sec Group 1</span>
-			    </label>
-			    
-			     <label class="checkbox">
-			      <input type="checkbox"> <span>Sec Group 2</span>
-			    </label>
-			    
-			    <label class="checkbox">
-			      <input type="checkbox"> <span>Sec Group 1</span>
-			    </label>
-			    
-			     <label class="checkbox">
-			      <input type="checkbox"> <span>Sec Group 2</span>
-			    </label>
-			 
-			    <label class="checkbox">
-			      <input type="checkbox"> <span>Sec Group 1</span>
-			    </label>
-			    
-			     <label class="checkbox">
-			      <input type="checkbox"> <span>Sec Group 2</span>
-			    </label>
-        	</fieldset>
-        	
-        	<fieldset class="vm-pass">
-        		<div class="control-group">
-		        	<label>Password</label>
-		        	<input type="text">
-		        	<span class="help-inline">Please correct the error</span>
-        		</div>
-        		
-	        	<div class="control-group">
-		        	<label>Confirm</label>
-		        	<input type="text">
-		        	<span class="help-inline">Please correct the error</span>
-	        	</div>
-        	</fieldset>
-        </div>
-
-        <div class="modal-footer">
-        	<button class="btn">Back</button>
-            <a href="instance-created.html" class="btn btn-primary">Create Instance</a>
-        </div>
-    </div>
-
     <nav class="clearfix" id="mainnav-wrap">
         <div class="left">
             <a href="" class="active">Projects</a> <a href="">Images</a> <a href="">Users</a> <a href="">Billing</a> <a href="">Resources</a> <a href="">Support</a>
@@ -409,9 +309,19 @@
             </div>
         </div>
     </div>
+    
+    <div id="notice-details">
+	    <div class="notice-item clearfix green">
+	    	<i class="icon-broadcast"></i> Instance 1 has been created
+	    </div>
+	    
+	    <div class="notice-item clearfix red">
+	    	<i class="icon-new"></i> Error deleting project 1
+	    </div>
+    </div>
 
     <div id="footer-wrap">
-        Notices
+        <a href="" id="main-notice">2 <i class="icon-broadcast"></i></a>
     </div>
     <!--[if lt IE 7]><script src="js/icomoo-ie7.js"></script><![endif]-->
     

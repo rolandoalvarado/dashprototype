@@ -79,3 +79,9 @@
 .icon-camera:before {
 	content: "\e001";
 }
+.icon-hourglass:before {
+	content: "\e002";
+}
+.icon-broadcast:before {
+	content: "\e004";
+}

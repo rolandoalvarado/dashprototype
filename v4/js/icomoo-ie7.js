@@ -22,7 +22,9 @@ window.onload = function() {
 			'icon-cross-2' : '&#x2b;',
 			'icon-users' : '&#x2a;',
 			'icon-user' : '&#xe000;',
-			'icon-camera' : '&#xe001;'
+			'icon-camera' : '&#xe001;',
+			'icon-hourglass' : '&#xe002;',
+			'icon-broadcast' : '&#xe004;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;
