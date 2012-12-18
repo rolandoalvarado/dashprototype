@@ -39,11 +39,169 @@ a:hover
 	font-size: 16px
 
 .modal
-	border-radius: 3px
+	border-radius: 0px
+	box-shadow: 0 0 5px rgba(0,0,0,0.1)
+	border: 1px solid #ddd
+	border-top: 6px solid #202020
+
+.modal-footer 
+	border-radius: 0
+	box-shadow: none
 
 .modal-backdrop, .modal-backdrop.fade.in
 	opacity: 0.7
 
+#create-instance 
+	width: 75%
+	margin-left: -37% 
+
+
+	header 
+		border-bottom: 1px solid #ddd
+		
+		.left,
+		.right 
+			padding: 12px 20px 6px
+	
+	header a 
+		color: #666
+		margin-right: 10px
+
+
+	header a:hover 
+		color: #000
+
+
+	header a.active 
+		color: #000
+		font-weight: bold
+	
+	
+	header input 
+		border: none
+		box-shadow: none
+	
+	
+	.modal-body 
+		padding: 0
+		margin: 0
+
+.vm-item 
+	margin: 0
+	padding: 15px 0
+	border-bottom: 1px solid #ddd	
+
+	&:last-child 
+		border-bottom: none
+	
+	&:hover 
+		cursor: pointer
+		background-color: #f8f8f8
+	
+	&.active 
+		background-color: #fafafa	
+	
+	dt,
+	dd 
+		display: inline-block
+		
+	dt 
+		text-align: center
+		width: 10%
+	
+	dd 
+		width: 43%
+
+	.os 
+		color: #ccc
+
+#create-instance header .vm-item dt:hover 
+	background-color: transparent
+	
+	
+.modal-body  
+	fieldset 
+		border-bottom: 1px solid #eee
+		padding: 6px 20px
+	
+	
+.vm-details 
+	
+	label 
+		margin-right: 10px
+		display: inline-block
+		font-size: 11px
+		font-weight: bold
+		text-transform: uppercase
+	
+	input,
+	select 
+		margin-top: 9px
+	
+	.vm-name input 
+		width: 90%
+	
+	.vm-size label 
+		margin-right: 20px
+	
+	
+	.vm-size input 
+		
+		width: 12%
+	
+	
+	.vm-size select 
+		width: 70%
+		margin-right: 8px
+	
+	
+	.vm-keypair label 
+		position: relative
+		top: 7px
+		margin-right: 10px
+	
+	
+	.vm-keypair select 
+		margin-left: 10px
+	
+	
+	.checkbox span 
+		position: relative
+		top: 5px
+	
+	
+	.vm-secgroup  
+		padding-top: 0
+		margin-top: 0
+	
+	
+	.vm-secgroup label 
+		text-transform: none
+		margin-right: 20px
+		font-weight: normal
+	
+	.vm-pass input 
+		width: 70%
+		margin-right: 10px
+	
+	.vm-pass .control-group 
+		width: 50%
+		float: left
+		position: relative
+	
+	.modal-body .vm-secgroup-label 
+		border-bottom: 0
+		padding-bottom: 0
+		margin: 0
+	
+	.help-inline 
+		color: #fff
+		padding: 3px 6px
+		position: absolute
+		top: -10px
+		right: 0
+		background-color: #e5172c
+	
 input[type=text] 
 	border-radius: 0
 

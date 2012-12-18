@@ -30,45 +30,103 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-    <div id="create-instance" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="create-instance" class="modal " tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
        	<header class="clearfix">
-        	<p class="left"><a href="" class="active">All</a> <a href="">My Images</a></p> <input class="right" type="text" placeholder="Search"/>
+        	<dl class="vm-item">
+            	<dt><img src="img/Ubuntu_120.png" alt="Ubuntu_120" width="30" height="30"></dt>
+            	
+	            <dd>Ubuntu Server LTS</dd>
+	            
+	            <dd class="os">Linux</dl>
+            </dl>
         </header>
         
-        <div class="modal-body">
-            <div id="vm-item-wrap">
-	            <dl class="vm-item active">
-	            	<dt><img src="img/Ubuntu_120.png" alt="Ubuntu_120" width="30" height="30"></dt>
-	            	
-		            <dd>Ubuntu Server 12.04.1</dd>
-		            
-		            <dd class="os">Linux</dl>
-	            </dl>
-	            
-	            <dl class="vm-item">
-	            	<dt><img src="img/Ubuntu_120.png" alt="Ubuntu_120" width="30" height="30"></dt>
-	            	
-		            <dd>Ubuntu Server LTS</dd>
-		            
-		            <dd class="os">Linux</dl>
-	            </dl>
-	            
-	            <dl class="vm-item">
-	            	<dt><img src="img/Windows_60.png" alt="Windows_60" width="30" height="30"></dt>
-	            	
-		            <dd>Windows Server 2008</dd>
-		            
-		            <dd class="os">Windows</dl>
-	            </dl>
-            </div>
+        <div class="modal-body vm-details">
+        	<fieldset class="vm-name">
+	        	<label>Name</label>
+	        	
+	        	<input type="text" placeholder="My Instance Name"> 
+        	</fieldset>
+        	
+        	<fieldset class="vm-size">
+        		<label>Size</label>
+        		
+        		<select>
+				  <option>Small (1 core, 100 Gb Memory, 1 usd/hr)</option>
+				  <option>Medium (1 core, 100 Gb Memory, 1 usd/hr)</option>
+				  <option>Large (1 core, 100 Gb Memory, 1 usd/hr)</option>
+				</select>
+				
+	        	<label>Qty</label>
+	        	<input type="text" placeholder="1">
+        	</fieldset>
+        	
+        	<fieldset class="vm-keypair">
+	        	<label class="checkbox">
+			      <input type="checkbox" checked> <span>Keypair</span>
+			    </label>
+			    
+			    <select>
+				  <option>Keypair 1</option>
+				  <option>Keypair 2</option>
+				  <option>Keypair 3</option>
+				</select>
+        	</fieldset>
+        	
+        	<fieldset class="vm-secgroup-label">
+        		<label>Security Group</label>
+        	</fieldset>
+        	
+        	<fieldset class="vm-secgroup">	
+	        	<label class="checkbox">
+			      <input type="checkbox" checked> <span>Default</span>
+			    </label>
+			    
+			    <label class="checkbox">
+			      <input type="checkbox"> <span>Sec Group 1</span>
+			    </label>
+			    
+			     <label class="checkbox">
+			      <input type="checkbox"> <span>Sec Group 2</span>
+			    </label>
+			    
+			    <label class="checkbox">
+			      <input type="checkbox"> <span>Sec Group 1</span>
+			    </label>
+			    
+			     <label class="checkbox">
+			      <input type="checkbox"> <span>Sec Group 2</span>
+			    </label>
+			 
+			    <label class="checkbox">
+			      <input type="checkbox"> <span>Sec Group 1</span>
+			    </label>
+			    
+			     <label class="checkbox">
+			      <input type="checkbox"> <span>Sec Group 2</span>
+			    </label>
+        	</fieldset>
+        	
+        	<fieldset class="vm-pass">
+        		<div class="control-group">
+		        	<label>Password</label>
+		        	<input type="text">
+		        	<span class="help-inline">Please correct the error</span>
+        		</div>
+        		
+	        	<div class="control-group">
+		        	<label>Confirm</label>
+		        	<input type="text">
+		        	<span class="help-inline">Please correct the error</span>
+	        	</div>
+        	</fieldset>
         </div>
 
         <div class="modal-footer">
-            <a href="instance-create-2.html" class="btn btn-primary">Next</a>
+        	<button class="btn">Back</button>
+            <button class="btn btn-primary">Create Instance</button>
         </div>
     </div>
-    
-    
 
     <nav class="clearfix" id="mainnav-wrap">
         <div class="left">
@@ -159,7 +217,7 @@
     <div id="main-wrap">
         <aside id="instances">
             <header class="clearfix">
-                <h4 class="left">Instances</h4><a href="#create-instance" data-toggle="modal" class="right"><i class="icon-plus"></i></a>
+                <h4 class="left">Instances</h4><a href="#myModal" data-toggle="modal" class="right"><i class="icon-plus"></i></a>
                 
             </header>
 
