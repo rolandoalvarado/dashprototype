@@ -70,3 +70,12 @@
 .icon-cross-2:before {
 	content: "\2b";
 }
+.icon-users:before {
+	content: "\2a";
+}
+.icon-user:before {
+	content: "\e000";
+}
+.icon-camera:before {
+	content: "\e001";
+}

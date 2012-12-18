@@ -19,5 +19,11 @@ $(document).ready(function(){
 	
 	$('#instances').height(wHeight);
 	$('#details').height(wHeight);
-
+	
+	$('a[rel=tooltip]').hover(function(){
+		$(this).tooltip('show');
+	}, function() {
+		$(this).tooltip('hide');
+	})
+	
 });

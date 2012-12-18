@@ -27,15 +27,9 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-
-            <h3 id="myModalLabel">Modal header</h3>
-        </div>
-
+    <div id="myModal" class="modal " tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-body">
-            <p>One fine body…</p>
+            <input type="text" placeholder="Instance Name" />
         </div>
 
         <div class="modal-footer">
@@ -72,13 +66,6 @@
             <a class="dropdown-toggle" id="proj-name" role="button" data-toggle="dropdown" data-target="#" href=""><i class="icon-cd main"></i> Project Name <i class="icon-arrow-down"></i></a>
 
             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-            
-            	<li>
-                    <a href=""><i class="icon-plus"></i>  New Project</a>
-                </li>
-            
-            	<li class="divider"></li>
-            	
                 <li>
                     <a href=""><i class="icon-cd"></i>  Project Name 2</a>
                 </li>
@@ -98,24 +85,38 @@
                 
             </ul>
         </div>
-        
-        <div class="left" id="instance-name">Instance 1-1 <span>(10.2.0.14)</span></div>
 
         <div class="right">
+        	<div class="btn-group left">
+	        	<a class="btn" rel="tooltip" title="Volumes"><i class="icon-drive"></i></a> 
+	        	
+	        	<a class="btn" rel="tooltip" title="Floating IP"><i class="icon-network"></i></a> 
+	        	
+	        	<a class="btn" rel="tooltip" title="Security Group"><i class="icon-lock"></i></a>
+	        	
+	        	<a class="btn" rel="tooltip" title="Collaborators"><i class="icon-users"></i></a>
+        	</div>
+        	
             <div class="dropdown left">
 	            <a class="dropdown-toggle btn" id="actions" role="button" data-toggle="dropdown" data-target="#" href=""><i class="icon-cog"></i></a>
 	
 	            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 	                <li>
-	                    <a href="">Quotas</a>
-	                </li>
-	                
+                    	<a href=""><i class="icon-plus"></i>  New Project</a>
+                    </li>
+                
 	                <li>
 	                    <a href="">Edit</a>
 	                </li>
 	                
 	                <li>
 	                    <a href="">Delete</a>
+	                </li>
+	                
+	                <li class="divider"></li>
+	                
+	                <li>
+	                    <a href="">Quotas</a>
 	                </li>
 	            </ul>
 	        </div>

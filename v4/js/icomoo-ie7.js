@@ -19,7 +19,10 @@ window.onload = function() {
 			'icon-drive' : '&#x27;',
 			'icon-cross' : '&#x28;',
 			'icon-cog' : '&#x29;',
-			'icon-cross-2' : '&#x2b;'
+			'icon-cross-2' : '&#x2b;',
+			'icon-users' : '&#x2a;',
+			'icon-user' : '&#xe000;',
+			'icon-camera' : '&#xe001;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;
