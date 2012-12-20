@@ -19,6 +19,7 @@ $(document).ready(function(){
 	
 	$('#instances').height(wHeight);
 	$('#details').height(wHeight);
+	$('.blank-slate-wrap').height(wHeight);
 	
 	$('a[rel=tooltip]').hover(function(){
 		$(this).tooltip('show');

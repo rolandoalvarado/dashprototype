@@ -21,9 +21,11 @@ a:hover
 	letter-spacing: 1px
 
 .btn-primary
+	text-shadow: -1px -1px 0 rgba(0,0,0,1)
 	background-color: #404040
 	
 	&:hover
+		text-shadow: -1px -1px 0 rgba(0,0,0,0.5)
 		background-color: #666
 	
 .dropdown-menu 
@@ -301,6 +303,35 @@ input[type=text]
 	.icon-arrow-down 
 		font-size: 14px
 		margin-top: 5px
+
+/*-------------------------------- BLANK SLATE */
+.blank-slate-wrap 
+	width: 100%
+	height: 600px
+	background: url(../img/blank.png) no-repeat center top
+	background-size: 100%
+
+.blank-slate 
+	position: relative
+	top: 120px
+	margin: 0 auto
+	padding: 18px 40px
+	width: 500px
+	background-color: #fff
+	border: 1px solid #ddd
+	border-top: 3px solid #202020
+	box-shadow: 0 1px 5px rgba(0,0,0,0.1)
+
+
+	h3 
+		font-weight: 500
+		margin-bottom: 18px
+	
+	
+	p 
+		color: #777
+		margin-bottom: 21px
+	
 
 /*-------------------------------- MAIN CONTENT */
 #instances,
