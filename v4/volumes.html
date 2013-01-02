@@ -20,6 +20,92 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.6.2.min.js">
 </script>
+	<style type="text/css" media="screen">
+		header h1 {
+			font-size: 28px;
+			margin: 18px 0;
+			font-weight: normal;
+		}
+		
+		#sub-wrap {
+			padding: 0 20px !important
+		}
+		
+		#sub-wrap .align-right {
+			text-align: right
+		}
+		
+		.volume-item {
+			margin-right: 20px;
+			float: left;
+			width: 100%;
+		}
+		
+		.volume-item dd {
+			margin-left: 0;
+		}
+		
+		.volume-img {
+			color: #FFF;
+			background: #24b6bf;
+			text-align: center;
+			padding: 6px 15px 12px;
+			margin-bottom: 9px;
+		}
+		
+		.volume-img:hover {
+			cursor: pointer;
+			opacity: 0.8;	
+		}
+		
+		.volume-img dl {
+			margin-bottom: 0;
+		}
+		
+		.volume-img dt {
+			font-size: 32px;
+			margin-bottom: 9px;
+		}
+		
+		.volume-img dd {
+			font-size: 11px;
+		}
+		
+		.volume-info {
+			margin-top: 0;
+		}
+		
+		.volume-info dt {
+			color: #000;
+		}
+		
+		.volume-info dd {
+			font-size: 11px;
+		}
+		
+		.volume-snapshot {
+			display: none;
+			overflow:auto;
+			padding: 18px 20px;
+			background-color: #eee;
+		}
+		
+		.volume-snapshot dl {
+			margin-bottom: 0;
+		}
+		
+		.volume-snapshot header {
+			margin-bottom: 12px;
+		}
+		
+		.desc {
+			color: #ccc;
+		}
+		
+		.volume-wrap {
+			margin-top: 18px
+		}
+	</style>
 </head>
 
 <body>
@@ -143,69 +229,196 @@
 	        </div>
         </div>
     </header>
-
-    <div id="main-wrap">
-    	<div id="sub-wrap">
-	    	<header>
-		    	<h1>Volumes</h1>
-	    	</header>
-	    	
-	    	<table class="table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-
-                        <th>Description</th>
-
-                        <th>Size</th>
-
-                        <th>Status</th>
-                        
-                        <th>Action</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>test</td>
-
-                        <td>12314</td>
-
-                        <td>1 GB</td>
-
-                        <td>Available</td>
-                        
-                        <td>Actions</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>test</td>
-
-                        <td>12314</td>
-
-                        <td>1 GB</td>
-
-                        <td>Available</td>
-                        
-                        <td>Actions</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>test</td>
-
-                        <td>12314</td>
-
-                        <td>1 GB</td>
-
-                        <td>Available</td>
-                        
-                        <td>Actions</td>
-                    </tr>
-                </tbody>
-            </table>
-    	</div>
+    
+    <div class="container-fluid volume-wrap">
+    	<header class="row-fluid">
+	    	<h1>Volumes</h1>
+    	</header>
+	    <div class="row-fluid">
+		    <div class="span3">
+			    <div class="volume-item">
+		    		<div class="volume-img">
+			    		<dl>
+				    		<dt>1GB</dt>
+				    		
+				    		<dd>Attached to Instance 1-1</dd>
+			    		</dl>
+		    		</div>
+		    		
+			    	<dl class="volume-info">
+				    	<dt>Volume Name</dt>
+				    	
+				    	<dd class="desc">Description</dd>
+			    	</dl>
+		    	</div>
+		    </div>
+		    
+		    <div class="span3">
+			    <div class="volume-item">
+		    		<div class="volume-img">
+			    		<dl>
+				    		<dt>8GB</dt>
+				    		
+				    		<dd>Attached to Instance 1-1</dd>
+			    		</dl>
+		    		</div>
+		    		
+			    	<dl class="volume-info">
+				    	<dt>Volume Name</dt>
+				    	
+				    	<dd class="desc">Description</dd>
+			    	</dl>
+		    	</div>
+		    </div>
+		    
+		    <div class="span3">
+			    <div class="volume-item">
+		    		<div class="volume-img">
+			    		<dl>
+				    		<dt>3GB</dt>
+				    		
+				    		<dd>Attached to Instance 1-1</dd>
+			    		</dl>
+		    		</div>
+		    		
+			    	<dl class="volume-info">
+				    	<dt>Volume Name</dt>
+				    	
+				    	<dd class="desc">Description</dd>
+			    	</dl>
+		    	</div>
+		    </div>
+		    
+		    <div class="span3">
+			    <div class="volume-item">
+		    		<div class="volume-img">
+			    		<dl>
+				    		<dt>18GB</dt>
+				    		
+				    		<dd>Attached to Instance 1-1</dd>
+			    		</dl>
+		    		</div>
+		    		
+			    	<dl class="volume-info">
+				    	<dt>Volume Name</dt>
+				    	
+				    	<dd class="desc">Description</dd>
+			    	</dl>
+		    	</div>
+		    </div>
+	    </div>
     </div>
-
+    
+    
+    <div class="container-fluid volume-snapshot">
+    	<header>
+	    	Volume Snapshot
+    	</header>
+	    <div class="row-fluid">
+		    <div class="span2">
+			    <div class="volume-item">
+		    		<div class="volume-img">
+			    		<dl>
+				    		<dt>32GB</dt>
+			    		</dl>
+		    		</div>
+		    		
+			    	<dl class="volume-info">
+				    	<dt>Volume Name</dt>
+				    	
+				    	<dd class="desc">Description</dd>
+			    	</dl>
+		    	</div>
+		    </div>
+		    
+		    <div class="span2">
+			    <div class="volume-item">
+		    		<div class="volume-img">
+			    		<dl>
+				    		<dt>32GB</dt>
+			    		</dl>
+		    		</div>
+		    		
+			    	<dl class="volume-info">
+				    	<dt>Volume Name</dt>
+				    	
+				    	<dd class="desc">Description</dd>
+			    	</dl>
+		    	</div>
+		    </div>
+		    
+		    <div class="span2">
+			    <div class="volume-item">
+		    		<div class="volume-img">
+			    		<dl>
+				    		<dt>32GB</dt>
+			    		</dl>
+		    		</div>
+		    		
+			    	<dl class="volume-info">
+				    	<dt>Volume Name</dt>
+				    	
+				    	<dd class="desc">Description</dd>
+			    	</dl>
+		    	</div>
+		    </div>
+		    
+		    <div class="span2">
+			    <div class="volume-item">
+		    		<div class="volume-img">
+			    		<dl>
+				    		<dt>32GB</dt>
+				    		
+			    		</dl>
+		    		</div>
+		    		
+			    	<dl class="volume-info">
+				    	<dt>Volume Name</dt>
+				    	
+				    	<dd class="desc">Description</dd>
+			    	</dl>
+		    	</div>
+		    </div>
+		    
+		    
+		    <div class="span2">
+			    <div class="volume-item">
+		    		<div class="volume-img">
+			    		<dl>
+				    		<dt>16GB</dt>
+				    		
+			    		</dl>
+		    		</div>
+		    		
+			    	<dl class="volume-info">
+				    	<dt>Volume Name</dt>
+				    	
+				    	<dd class="desc">Description</dd>
+			    	</dl>
+		    	</div>
+		    </div>
+		    
+		    
+		    <div class="span2">
+			    <div class="volume-item">
+		    		<div class="volume-img">
+			    		<dl>
+				    		<dt>199GB</dt>
+				    		
+			    		</dl>
+		    		</div>
+		    		
+			    	<dl class="volume-info">
+				    	<dt>Volume Name</dt>
+				    	
+				    	<dd class="desc">Description</dd>
+			    	</dl>
+		    	</div>
+		    </div>
+	    </div>
+    </div>
+ 
+    
     <div id="footer-wrap">
         <a href="" id="main-notice">2 <i class="icon-broadcast"></i></a> <p>Everything's running smooth Captain</p>
     </div>
@@ -218,5 +431,11 @@ window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/
 </script> <script src="js/plugins.js">
 </script> <script src="js/main.js">
 </script> 
+
+<script>
+	$('.volume-img').click(function(){
+		$('.volume-snapshot').slideToggle();
+	})
+</script>
 </body>
 </html>
