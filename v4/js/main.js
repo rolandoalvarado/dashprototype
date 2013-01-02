@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var wHeight = $(window).outerHeight() - $('#footer-wrap').outerHeight() - $('#head-wrap').outerHeight() - $('#mainnav-wrap').outerHeight();
+	var wHeight = $(window).outerHeight() - $('#footer-wrap').outerHeight() - $('#head-wrap').outerHeight() - $('#mainnav-wrap').outerHeight() - $('#notice-details').outerHeight();
 	
 	var top = $('#tab-wrap').offset().top - parseFloat($('#tab-wrap').css('marginTop').replace(/auto/, 0));
 	
