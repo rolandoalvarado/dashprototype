@@ -282,7 +282,58 @@
 	                </li>
 	            </ul>
 	            
-	            <p><a href="" class="btn right instance-action"><i class="icon-cog"></i></i></a></p>
+	            <div class="dropdown">
+	            	<a href="" class="btn right instance-action dropdown-toggle" data-toggle="dropdown" data-target="#" href="">Actions</a>
+	            	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+	                    <li>
+	                        <a href="">Soft Reboot</a>
+	                    </li>
+	                    
+	                    <li>
+	                        <a href="">Hard Reboot</a>
+	                    </li>
+	                    
+	                    <li>
+	                        <a href="">Pause</a>
+	                    </li>
+	                    
+	                    <li>
+	                        <a href="">Suspend</a>
+	                    </li>
+	                    
+	                    <li>
+	                        <a href="">Reset State</a>
+	                    </li>
+	                    
+	                    <li>
+	                        <a href="">Logs</a>
+	                    </li>
+	                    
+	                    <li>
+	                        <a href="">VNC Console</a>
+	                    </li>
+	                    
+	                    <li class="divider"></li>
+	                    
+	                    <li>
+	                        <a href="">Take Snapshot</a>
+	                    </li>
+	                    
+	                    <li>
+	                        <a href="">Attach Volume</a>
+	                    </li>
+	                    
+	                    <li>
+	                        <a href="">Associate Floating IP</a>
+	                    </li>
+	                    
+	                    <li class="divider"></li>
+	                    
+	                    <li>
+	                        <a href="">Delete</a>
+	                    </li>
+	                </ul>
+	            </div>
             </header>
 
             <div class="tab-content">
@@ -384,7 +435,41 @@
                 </div>
 
                 <div class="tab-pane" id="monitoring">
-                    Monitoring
+                	<div class="sub-pane">
+                		<header class="clearfix monitor-header">
+		                    <h3 class="left">Activity</h3> 
+		                    
+		                    <p class="right">24 hours <i class="icon-arrow-down"></i></p> 
+		                    
+		                    <p class="right">Relative <i class="icon-arrow-down"></i></p> 
+		                 </header>
+	                    
+	                    <div class="graph-container">
+		                    <h4>CPU</h4>
+		                    
+		                    <img src="img/large-graph.png" alt="large-graph">
+	                    </div>
+	                    
+	                    <div class="graph-container">
+		                    <h4>Network</h4>
+		                    
+		                    <img src="img/large-graph.png" alt="large-graph">
+	                    </div>
+	                    
+	                    <div class="graph-container">
+		                    <h4>I/O</h4>
+		                    
+		                    <img src="img/large-graph.png" alt="large-graph">
+	                    </div>
+                	</div>
+                </div>
+                
+                <div class="tab-pane" id="snapshots">
+                    <div class="sub-pane">
+                		<header class="clearfix">
+		                    <h3>Snapshot</h3>
+	                    </header>
+                	</div>
                 </div>
             </div>
         </div>

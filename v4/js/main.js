@@ -27,4 +27,9 @@ $(document).ready(function(){
 		$(this).tooltip('hide');
 	})
 	
+	$('#main-tab a').click(function (e) {
+	  e.preventDefault();
+	  $(this).tab('show');
+	})
+	
 });

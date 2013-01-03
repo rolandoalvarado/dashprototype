@@ -355,6 +355,29 @@ input[type=text]
 	float: left
 	overflow: auto
 
+.sub-pane
+	padding: 0 20px 36px
+
+/*-------------------------------- MONITORING PANE */
+.sub-pane 
+	h3 
+		font-weight: normal
+
+.graph-container 
+	margin-bottom: 24px
+	
+	h4 
+		font-weight: normal
+		font-size: 14px
+
+.monitor-header
+	.right 
+		margin-top: 21px
+		margin-left: 10px
+		
+		i 
+			margin-top: 3px
+		
 /*-------------------------------- INSTANCE PANE */
 #instances
 	width: 19.9%
@@ -551,12 +574,21 @@ input[type=text]
 				border-right: 1px solid #f6f6f6
 				color: #404040
 
-.instance-action 
-	background-color: #FFF
-	position: absolute
-	right: 20px
-	top: 12px
+#tab-wrap
+	.dropdown
+		top: -45px
+		right: 20px
 	
+	.instance-action 
+		background-color: #FFF
+	
+	.dropdown-menu 
+		left: 70%
+		right: 0
+		top: 25px
+		border: 1px solid #ddd
+		
+		
 /*-------------------------------- GRAPHS */
 #graphs-wrap
 	background-color: #fcfcfc
@@ -639,8 +671,6 @@ input[type=text]
 		
 		a 
 			color: #fff
-
-
 
 .notice-item 
 	padding: 12px 20px
