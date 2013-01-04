@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Volumes</title>
+    <title>Dashboard v4 Volumes</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
@@ -20,6 +20,97 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.6.2.min.js">
 </script>
+	<style type="text/css" media="screen">
+		header h1 {
+			font-size: 28px;
+			margin: 18px 0;
+			font-weight: normal;
+		}
+		
+		#sub-wrap {
+			padding: 0 20px !important
+		}
+		
+		#sub-wrap .align-right {
+			text-align: right
+		}
+		
+		.volume-item {
+			margin-right: 20px;
+			float: left;
+			width: 100%;
+		}
+		
+		.volume-item dd {
+			margin-left: 0;
+		}
+		
+		.volume-img,
+		.volume-img2 {
+			color: #FFF;
+			background: #24b6bf;
+			text-align: center;
+			padding: 6px 15px 12px;
+			margin-bottom: 9px;
+		}
+		
+		.volume-img:hover {
+			cursor: pointer;
+			opacity: 0.8;	
+		}
+		
+		.volume-img dl,
+		.volume-img2 dl {
+			margin-bottom: 0;
+		}
+		
+		.volume-img dt,
+		.volume-img2 dt {
+			font-size: 32px;
+			margin-bottom: 9px;
+		}
+		
+		.volume-img dd,
+		.volume-img2 dd {
+			font-size: 11px;
+		}
+		
+		.volume-info {
+			margin-top: 0;
+		}
+		
+		.volume-info dt {
+			color: #000;
+		}
+		
+		.volume-info dd {
+			font-size: 11px;
+		}
+		
+		.volume-snapshot  {
+			margin-bottom: 18px	
+		}
+		
+		.volume-snapshot,
+		.volume-snapshot2 {
+			display: none;
+			overflow:auto;
+			padding: 18px 20px;
+			background-color: #eee;
+		}
+		
+		.volume-snapshot dl {
+			margin-bottom: 0;
+		}
+		
+		.volume-snapshot header {
+			margin-bottom: 12px;
+		}
+		
+		.desc {
+			color: #ccc;
+		}
+	</style>
 </head>
 
 <body>
@@ -144,11 +235,9 @@
         </div>
     </header>
     
-    <div class="container-fluid content-wrap">
-    	<header class="row-fluid clearfix">
-	    	<h1 class="left">Volumes</h1>
-	    	
-	    	<p><a href="" class="btn right">New Volume</a></p>
+    <div class="container-fluid volume-wrap">
+    	<header class="row-fluid">
+	    	<h1>Volumes</h1>
     	</header>
 	    <div class="row-fluid">
 		    <div class="span3">
