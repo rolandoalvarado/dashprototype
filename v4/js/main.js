@@ -32,4 +32,8 @@ $(document).ready(function(){
 	  $(this).tab('show');
 	})
 	
+	$('.volume-img').click(function(){
+		$('.volume-snapshot').slideToggle();
+	})
+	
 });
