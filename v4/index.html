@@ -20,12 +20,34 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.6.2.min.js">
 </script>
+	<style type="text/css" media="screen">
+		.page-loader {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			padding: 30px 5px;
+			z-index: 100;
+			background-color: #fff;
+			text-align: center;
+			border-radius: 3px;
+			border: 1px solid #eee;
+			box-shadow: 0 0 5px rgba(0,0,0,0.1);
+		}
+		
+		.page-loader img {
+			width: 70%;
+		}
+	</style>
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+    
+    <div class="page-loader">
+	    <img src="img/loader-page.gif" alt="loader-page">
+    </div>
 
     <div id="create-instance" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
        	<header class="clearfix">
@@ -192,7 +214,7 @@
             </header>
 
             <div class="instance-item clearfix active">
-                <div class="vm-img"><i class="icon-cube"></i></div>
+                <div class="vm-img"><img src="img/loader-instance.gif" alt="loader-instance" width="55" height="31" class="instance-loader"></div>
 
                 <dl>
                     <dt>Instance1-1</dt>
