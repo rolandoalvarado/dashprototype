@@ -20,61 +20,106 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.6.2.min.js">
 </script>
-	<style type="text/css" media="screen">
-		
-	</style>
+<style type="text/css" media="screen">
+	fieldset.project-name,
+	fieldset.project-desc {
+  	border-bottom: none;
+	}
+	
+	.project-name input {
+  	width: 98%;
+  	margin-bottom: 0;
+	}
+	
+	fieldset.project-desc {
+  	margin-bottom: 12px;
+  	color: #ccc;
+	}
+	
+	table.table {
+  	margin-bottom: 0;
+	}
+	
+	table.table th,
+	table.table td {
+  	padding-left: 20px
+	}
+</style>
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-    
-    <!--
-<div class="page-loader">
-	    <img src="img/loader-page.gif" alt="loader-page">
-    </div>
--->
 
-    <div id="create-instance" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-       	<header class="clearfix">
-        	<p class="left"><a href="" class="active">All</a> <a href="">My Images</a></p> <input class="right" type="text" placeholder="Search"/>
-        </header>
-        
-        <div class="modal-body">
-            <div id="vm-item-wrap">
-	            <dl class="vm-item active">
-	            	<dt><img src="img/Ubuntu_120.png" alt="Ubuntu_120" width="30" height="30"></dt>
-	            	
-		            <dd>Ubuntu Server 12.04.1</dd>
-		            
-		            <dd class="os">Linux</dl>
-	            </dl>
-	            
-	            <dl class="vm-item">
-	            	<dt><img src="img/Ubuntu_120.png" alt="Ubuntu_120" width="30" height="30"></dt>
-	            	
-		            <dd>Ubuntu Server LTS</dd>
-		            
-		            <dd class="os">Linux</dl>
-	            </dl>
-	            
-	            <dl class="vm-item">
-	            	<dt><img src="img/Windows_60.png" alt="Windows_60" width="30" height="30"></dt>
-	            	
-		            <dd>Windows Server 2008</dd>
-		            
-		            <dd class="os">Windows</dl>
-	            </dl>
-            </div>
-        </div>
+    <div id="create-instance" class="modal " tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-body vm-details">
+      <fieldset class="project-name">
+        <input type="text" placeholder="My Project Name">
+      </fieldset>
+      
+      <fieldset class="project-desc">
+        double click to add a description&hellip;
+      </fieldset>
+      
+      <table class="table table-striped quota-table">
+        <tbody>
+          <tr>
+            <th>Quota Name
+              <a href="#" rel="tooltip" id="tt-quota" class="help-text" data-original-title="The maximum amount of resources allocated to a project. Project quotas can be increased or decreased. Input -1 to set quota to an infinite value. The resources that have editable quotas are: [1] The number of Floating IPs that are available, [2] How many volumes that can be attached, [3] The number of vCPUs that are available"></a>
+            </th>
+            <th>Limit</th>
+          </tr>
+          <tr>
+            <td>vCPUs</td>
+            <td>
+              <div class="control-group">
+                20
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Instances</td>
+            <td>
+              <div class="control-group">
+                10
+              </div>
+            </td>
+          </tr>
 
-        <div class="modal-footer">
-            <a href="instance-create-2.html" class="btn btn-primary">Next</a>
-        </div>
+          <tr>
+            <td>Volumes</td>
+            <td>
+              <div class="control-group">
+                10
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Floating IPs</td>
+            <td>
+              <div class="control-group">
+                10
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Security Groups</td>
+            <td>
+              <div class="control-group">
+                10
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
     </div>
-    
-    
+
+    <div class="modal-footer">
+      <a href="instance-created.html" class="btn">Cancel</a> <a href="blank-slate.html" class="btn btn-primary">Create Project</a>
+    </div>
+  </div>
 
     <nav class="clearfix" id="mainnav-wrap">
         <div class="left">
@@ -104,54 +149,33 @@
         <div class="dropdown left">
             <a class="dropdown-toggle" id="proj-name" role="button" data-toggle="dropdown" data-target="#" href=""><i class="icon-cd main"></i> Project Name <i class="icon-arrow-down"></i></a>
 
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="proj-dropdown">
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                    <a href=""><i class="icon-cd"></i>  This is a very long name of a project&hellip;</a>
+                </li>
 
                 <li>
-                    <a href=""><i class="icon-cd"></i>  Project Name <span>11 instances</span></a>
+                    <a href=""><i class="icon-cd"></i>  Project Name 3</a>
                 </li>
                 
                 <li>
-                    <a href=""><i class="icon-cd"></i>  Project Name <span>11 instances</span></a>
+                    <a href=""><i class="icon-cd"></i>  Project Name 3</a>
                 </li>
                 
                 <li>
-                    <a href=""><i class="icon-cd"></i>  Project Name <span>11 instances</span></a>
+                    <a href=""><i class="icon-cd"></i>  Project Name 4</a>
                 </li>
                 
                 <li>
-                    <a href=""><i class="icon-cd"></i>  Project Name <span>11 instances</span></a>
+                    <a href=""><i class="icon-cd"></i>  Project Name 4</a>
                 </li>
                 
                 <li>
-                    <a href=""><i class="icon-cd"></i>  Project Name <span>11 instances</span></a>
+                    <a href=""><i class="icon-cd"></i>  Project Name 4</a>
                 </li>
                 
                 <li>
-                    <a href=""><i class="icon-cd"></i>  Project Name <span>11 instances</span></a>
-                </li>
-                
-                <li>
-                    <a href=""><i class="icon-cd"></i>  Project Name <span>11 instances</span></a>
-                </li>
-                
-                <li>
-                    <a href=""><i class="icon-cd"></i>  Project Name <span>11 instances</span></a>
-                </li>
-                
-                <li>
-                    <a href=""><i class="icon-cd"></i>  Project Name <span>11 instances</span></a>
-                </li>
-                
-                <li>
-                    <a href=""><i class="icon-cd"></i>  Project Name <span>11 instances</span></a>
-                </li>
-                
-                <li>
-                    <a href=""><i class="icon-cd"></i>  Project Name <span>11 instances</span></a>
-                </li>
-                
-                <li>
-                    <a href=""><i class="icon-cd"></i>  Project Name <span>11 instances</span></a>
+                    <a href=""><i class="icon-cd"></i>  Project Name 4</a>
                 </li>
             </ul>
         </div>
@@ -196,12 +220,12 @@
     <div id="main-wrap">
         <aside id="instances">
             <header class="clearfix">
-                <h4 class="left">Instances</h4><a href="#create-instance" data-toggle="modal" class="right"><i class="icon-plus"></i></a>
+                <h4 class="left">Instances</h4><a href="#myModal" data-toggle="modal" class="right"><i class="icon-plus"></i></a>
                 
             </header>
 
             <div class="instance-item clearfix active">
-                <div class="vm-img"><img src="img/loader-instance.gif" alt="loader-instance" width="55" height="31" class="instance-loader"></div>
+                <div class="vm-img"><i class="icon-cube"></i></div>
 
                 <dl>
                     <dt>Instance1-1</dt>
@@ -285,64 +309,9 @@
 	                <li>
 	                    <a href="#monitoring">Monitoring <i class="icon-statistics"></i></a>
 	                </li>
-	                
-	                <li>
-	                    <a href="#snapshots">Snapshots <i class="icon-camera"></i></a>
-	                </li>
 	            </ul>
 	            
-	            <div class="dropdown">
-	            	<a href="" class="btn right instance-action dropdown-toggle" data-toggle="dropdown" data-target="#" href="">Actions</a>
-	            	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-	                    <li>
-	                        <a href="">Soft Reboot</a>
-	                    </li>
-	                    
-	                    <li>
-	                        <a href="">Hard Reboot</a>
-	                    </li>
-	                    
-	                    <li>
-	                        <a href="">Pause</a>
-	                    </li>
-	                    
-	                    <li>
-	                        <a href="">Suspend</a>
-	                    </li>
-	                    
-	                    <li>
-	                        <a href="">Reset State</a>
-	                    </li>
-	                    
-	                    <li>
-	                        <a href="">Logs</a>
-	                    </li>
-	                    
-	                    <li>
-	                        <a href="">VNC Console</a>
-	                    </li>
-	                    
-	                    <li class="divider"></li>
-	                    
-	                    <li>
-	                        <a href="">Take Snapshot</a>
-	                    </li>
-	                    
-	                    <li>
-	                        <a href="">Attach Volume</a>
-	                    </li>
-	                    
-	                    <li>
-	                        <a href="">Associate Floating IP</a>
-	                    </li>
-	                    
-	                    <li class="divider"></li>
-	                    
-	                    <li>
-	                        <a href="">Delete</a>
-	                    </li>
-	                </ul>
-	            </div>
+	            <p><a href="" class="btn right instance-action">Actions</i></a></p>
             </header>
 
             <div class="tab-content">
@@ -351,9 +320,9 @@
 	                    <dl class="left">
 		                    <dt>Instance1-1</dt>
 		                    
-		                    <dd><span class="label">Public</span> 1.322.32.43</dd>
+		                    <dd><span class="label">Public</span> 1.2.3.4</dd>
 		                    
-		                    <dd><span class="label">Private</span> 1.223.322.4</dd>
+		                    <dd><span class="label">Private</span> 1.2.3.4</dd>
 	                    </dl>
 	                </header>
                     
@@ -444,110 +413,14 @@
                 </div>
 
                 <div class="tab-pane" id="monitoring">
-                	<div class="sub-pane">
-                		<header class="clearfix monitor-header">
-		                    <h3 class="left">Activity</h3> 
-		                    
-		                    <p class="right">24 hours <i class="icon-arrow-down"></i></p> 
-		                    
-		                    <p class="right">Relative <i class="icon-arrow-down"></i></p> 
-		                 </header>
-	                    
-	                    <div class="graph-container">
-		                    <h4>CPU</h4>
-		                    
-		                    <img src="img/large-graph.png" alt="large-graph">
-	                    </div>
-	                    
-	                    <div class="graph-container">
-		                    <h4>Network</h4>
-		                    
-		                    <img src="img/large-graph.png" alt="large-graph">
-	                    </div>
-	                    
-	                    <div class="graph-container">
-		                    <h4>I/O</h4>
-		                    
-		                    <img src="img/large-graph.png" alt="large-graph">
-	                    </div>
-                	</div>
-                </div>
-                
-                <div class="tab-pane" id="snapshots">
-                    <div class="sub-pane">
-                		<header class="clearfix">
-		                    <h3>Snapshots</h3>
-	                    </header>
-	                    
-	                    <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-
-                                    <th>Type</th>
-
-                                    <th>Status</th>
-
-                                    <th>Public</th>
-                                    
-                                    <th>Container Format</th>
-                                    
-                                    <th class="align-right">Action</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td>Ubuntu 12.01.1 Ruby</td>
-
-                                    <td>Snapshot</td>
-
-                                    <td>ACTIVE</td>
-
-                                    <td>Yes</td>
-                                    
-                                    <td>OVF</td>
-                                    
-                                    <td class="align-right">launch</td>
-                                </tr>
-                                
-                                <tr>
-                                    <td>Ubuntu 12.01.1 Ruby</td>
-
-                                    <td>Snapshot</td>
-
-                                    <td>ACTIVE</td>
-
-                                    <td>Yes</td>
-                                    
-                                    <td>OVF</td>
-                                    
-                                    <td class="align-right">launch</td>
-                                </tr>
-                                
-                                <tr>
-                                    <td>Ubuntu 12.01.1 Ruby</td>
-
-                                    <td>Snapshot</td>
-
-                                    <td>ACTIVE</td>
-
-                                    <td>Yes</td>
-                                    
-                                    <td>OVF</td>
-                                    
-                                    <td class="align-right">launch</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                	</div>
+                    Monitoring
                 </div>
             </div>
         </div>
     </div>
 
     <div id="footer-wrap">
-        <a href="" id="main-notice">2 <i class="icon-broadcast"></i></a> <p>Everything's running smooth Captain</p>
+        <a href="" id="main-notice">2 <i class="icon-broadcast"></i></a>
     </div>
     <!--[if lt IE 7]><script src="js/icomoo-ie7.js"></script><![endif]-->
     
